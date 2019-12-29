@@ -1,0 +1,523 @@
+\documentclass[12pt]{article}
+
+\include{bis}
+
+\lhead{}
+\rhead{BIS-Basis -- Les 25}
+
+\begin{document}
+
+\ConfigureExSol
+
+\setcounter{section}{24}
+\section{Algemene begrippen bij het ontbinden in factoren}
+
+Op veel examens worden vragen gesteld in verband met het ontbinden in factoren. Waarom? Omdat het ontbinden inzicht vergt in het algebraïsch rekenen met getallen, eentermen en veeltermen.
+Wie kan ontbinden in factoren, bewijst dat hij zijn leerstof beheerst!
+Bestudeer dus de uitgewerkte voorbeelden zodat je begrijpt hoe de vork in de steel zit.
+Je hoeft immers niet uit het hoofd te leren, maar wel veel te oefenen om inzicht te krijgen en de techniek meester te worden.
+
+\subsection{Algemeenheden}
+
+\begin{itemize}
+  \item We werken het volgende rekenkundige product uit:
+$$3\times 5\times 7 = 105$$
+
+Omgekeerd kunnen we dan schrijven:
+$$105 = 3\times 5\times 7$$
+
+We zeggen dan, dat we 105 ontbonden hebben in een product van ondeelbare factoren.
+  \item We werken het volgende product van algebraïsche vormen uit:
+	$$(x + 3)(2x-5) = 2x^2 - 5x + 6x - 15 = 2x^2 + x - 15$$
+	Omgekeerd kunnen we dan schrijven:
+	$$2x^2 + x - 15 = (x + 3)(2x - 5)$$
+	We zeggen dan, dat we de veelterm $2x^2 + x - 15$ ontbonden hebben in een product van twee factoren $x + 3$ en $2x - 5$, die elk van een lagere graad zijn dan de veelterm.
+	
+	\item Definitie:\\
+	Een veelterm in factoren ontbinden, wil zeggen die veelterm schrijven als een product van twee of meer factoren, waarvan de graad zo laag mogelijk is.
+\end{itemize}
+
+Het nut van het ontbinden zal pas duidelijk worden op het einde van de cursus, bij het opzoeken van de g.g.d. of het k.g.v. van veeltermen, bij bewerkingen met veeltermbreuken, bij het oplossen van vergelijkingen van een hogere graad, ... We zullen nu één voor één de verschillende methodes om veeltermen te ontbinden behandelen.
+
+\subsection{Gemeenschappelijke factoren buiten de haakjes brengen}
+
+\subsubsection{Redenering}
+  We werken het volgende product uit:
+$$4xy^2(3x^2 - 2yz) = 12x^3y^2 - 8xy^3z$$
+Omgekeerd mogen we nu ook schrijven:
+$$12x^3y^2 - 8xy^3z = 4xy^2(3x^2 - 2yz)$$
+Door het {\em buiten haakjes brengen van de gemeenschappelijke factoren} is de veelterm nu geschreven als een product van factoren. De veelterm is nu {\em ontbonden}.
+
+\subsubsection{Werkwijze}
+  
+{\bf Buiten de haakjes:} de gemeenschappelijke factoren van elke term.\\
+{\bf Binnen de haakjes:} het quotiënt dat we bekomen door elke term van de veelterm te delen door de gemeenschappelijke factoren.
+
+\subsubsection*{Het vinden van de gemeenschappelijke factor:}
+\begin{description}
+  \item[de coëfficiënt] de grootste gemene deler (ggd) van de coëfficiënten. Bijvoorbeeld
+  $$ggd(12,8)=4\;.$$
+  \item[het lettergedeelte] de gemeenschappelijke letterfactoren, elk met hun kleinst voorkomende exponent. Bijvoorbeeld in $12x^3y^2 - 8xy^3z$ zijn $x$ en $y$ gemeenschappelijke letterfactoren.
+  \begin{itemize}
+    \item Kleinst voorkomende exponent van $x$ is $1$ $\rightarrow x$
+    \item Kleinst voorkomende exponent van $y$ is $2$ $\rightarrow y^2$
+  \end{itemize}
+  \item[de gemeenschappelijke factor] = het product van alle gemeenschappelijke factoren, dus
+  $$4xy^2\;.$$
+\end{description}
+
+\begin{voorbeeld}
+$$12x^3y^2 - 8x^2y^3z + 4x^2y^4 = \underbrace{4x^2y^2}_{gf} (\underbrace{3x}_{t_1} - \underbrace{2yz}_{t_2} + \underbrace{y^2}_{t_3})$$
+\begin{description}
+  \item[$gf$:] $4x^2y^2$ is de gemene factor buiten de haakjes
+  \item[$t_1$:] $(12x^3y^2):(4x^2y^2)=3x$ is de eerste term binnen de haakjes
+  \item[$t_2$:] $(-8x^2y^3z):(4x^2y^2)=-2yz$ is de tweede term binnen de haakjes
+  \item[$t_3$:] $(4x^2y^4):(4x^2y^2)=y^2$ is de derde term binnen de haakjes
+\end{description}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$24x^7 - 36y^2 = 12 (2x^7 - 3y^2)$$
+
+Het is ook de gewoonte een gemeenschappelijke cijferfactor buiten haakjes te brengen, alhoewel de graad van de veeltermfactor hierdoor niet verlaagt. Merk op dat de cijferfactor zelf niet ontbonden wordt in priemfactoren.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$ -30a^5 + 45b^4 = -15 (2a^5 - 3b^4)$$
+
+We kunnen ook de gemeenschappelijke factor laten voorafgaan door een minteken (denk dan aan de tekenregel !).
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$14a^3b^3 - 21a^2b^2 + 7ab = 7ab (2a^2b^2 - 3ab + 1)$$
+
+Let op de aanwezigheid van $+1$ binnen de haakjes! Immers 
+$$(7ab):(7ab) = 1$$
+(en niet $0$). De factor binnen de haakjes bevat steeds evenveel termen als de gegeven veelterm!
+\end{voorbeeld}
+
+\begin{exercise}
+Breng de gemeenschappelijke factoren buiten haakjes:
+\begin{enumerate}[(a)]
+  \item $2x^2y - 3xy^2 + x^2y^2$
+  \item $4a^2b + 8ac^2 - 12b^2c$
+  \item $21x^2y^2 - 14xy^3 - 28xy^4$
+  \item $75a^3b^2c + 25a^2b^2c^2 - 50a^4b^3c^3$
+  \item $16m^2n^3 - 24m^3n^2 + 32m^4n$
+  \item $12a^3b^2 + 6ab - 18a^2b^3$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+  \item $2x^2y - 3xy^2 + x^2y^2=xy (2x - 3y + xy)$
+  \item $4a^2b + 8ac^2 - 12b^2c=4 (a^2b + 2ac^2 - 3b^2c)$
+  \item $21x^2y^2 - 14xy^3 - 28xy^4=7xy^2 (3x - 2y - 4y^2)$
+  \item $75a^3b^2c + 25a^2b^2c^2 - 50a^4b^3c^3=25a^2b^2c (3a + c - 2a^2bc^2)$
+  \item $16m^2n^3 - 24m^3n^2 + 32m^4n=8m^2n (2n^2 - 3mn + 4m^2)$
+  \item $12a^3b^2 + 6ab - 18a^2b^3=6ab (2a^2b + 1 - 3ab^2)$
+\end{enumerate}
+\end{solution}
+
+\subsection{De gemeenschappelijke factor is een veelterm}
+
+\begin{voorbeeld}
+$$4x (\underline{a - b}) + 5y (\underline{a - b}) = (\underbrace{a - b}_{gf}) (\underbrace{4x}_{t_1} + \underbrace{5y}_{t_2})$$
+
+\begin{description}
+  \item[$gf$:] De gemene factor is $a-b$
+  \item[$t_1$:] $\dfrac{4x(a-b)}{a-b}=4x$
+  \item[$t_2$:] $\dfrac{5y(a-b)}{a-b}=5y$
+\end{description}
+
+Let op! De factor, die we hier buiten haakjes brengen, staat zelf tussen haakjes. Natuurlijk komt dan het quotiënt tussen een tweede stel haakjes.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$m (a + b) - (a + b) = (a + b) (m - 1)$$
+
+Let op de aanwezigheid van $-1$ binnen het tweede stel haakjes. Immers
+$$\dfrac{a+b}{a+b}=1\;.$$
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+  2a (x + y) - x - y &= 2a (x + y) - (x + y)\\
+                     &= (x + y) (2a - 1)
+\end{align*}
+Er schijnt geen gemeenschappelijke factor te zijn. Als we echter de laatste twee termen tussen haakjes zetten, dan komt hij te voorschijn (let op de tekens !).
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$2a (3x - y) - 3b (y - 3x)$$
+
+In deze veelterm is geen gemeenschappelijke factor aan te wijzen. Als we echter de veeltermen tussen de haakjes vergelijken, dan zien we dat $y - 3x$ het tegengestelde is van $3x - y$. Als we nu het teken vóór het tweede stel haakjes wijzigen en ook de tekens erbinnen, dan komt de gemeenschappelijke factor te voorschijn.
+
+\begin{align*}
+  2a (3x - y) - 3b (y - 3x) &= 2a (3x - y) + 3b (- y + 3x)\\
+                            &= 2a (3x - y) + 3b (3x - y)\\
+                            &= (3x - y) (2a + 3b)
+\end{align*}
+
+Wijzigen van tekens mag, op voorwaarde dat de tekens van 2 factoren gewijzigd worden. Immers, als we in een product 2 factoren van teken veranderen, dan blijft het resultaat ongewijzigd. Bijvoorbeeld:
+$$\underbrace{(-5)\cdot(+3)}_{=-15}=\underbrace{(+5)\cdot(-3)}_{=-15} \qquad\qquad
+  \underbrace{(-4)\cdot(-6)}_{=+24}=\underbrace{(+4)\cdot(+6)}_{=+24}$$
+\end{voorbeeld}
+
+\begin{exercise}
+Ontbind:
+\begin{enumerate}[(a)]
+  \item $a (x - 1) + 2 (x - 1)$
+  \item $a^2 (b + 5) + a (b + 5)$
+  \item $2a (x + y) - b (y + x)$
+  \item $2x (a - x) + 3y (x - a)$
+  \item $5a (m - 1) - (1 - m)$
+  \item $x (2a - b) + y (2a - b) - z (2a - b)$
+  \item $7k (x - y) - 2m (y - x) - x + y$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+  \item $a (x - 1) + 2 (x - 1)=(x - 1) (a + 2)$
+  \item $\begin{aligned}[t]a^2 (b + 5) + a (b + 5)
+  &=(b + 5) (a^2 + a)\\
+  &=a (b + 5) (a + 1)\end{aligned}$
+  \item $2a (x + y) - b (y + x)=(x + y) (2a - b) \mbox{ want } x + y = y + x$
+  \item $\begin{aligned}[t]2x (a - x) + 3y (x - a)
+  &=2x (a - x) - 3y (a - x)\\
+  &=(a - x) (2x - 3y)\end{aligned}$
+  \item $\begin{aligned}[t]5a (m - 1) - (1 - m)
+  &=5a (m - 1) + (m - 1)\\
+  &=(m - 1) (5a + 1)\end{aligned}$
+  \item $x (2a - b) + y (2a - b) - z (2a - b)=(2a - b) (x + y - z)$
+  \item $\begin{aligned}[t]7k (x - y) - 2m (y - x) - x + y
+  &=7k (x - y) + 2m (x - y) - (x - y)\\
+  &= (x - y) (7 k + 2 m - 1)\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\begin{voorbeeld}
+\begin{align*}
+(x + y) (3x + 1) - 6 (x + y) (1 - x)
+& = (x + y) [(3x + 1) - 6 (1 - x)]\\
+&= (x + y) (3x + 1 - 6 + 6x)\\
+&= (x + y) (9x - 5)
+\end{align*}
+
+Merk op: De quotiënten die tussen haakjes dienen geplaatst, staan zelf tussen haakjes, vandaar het gebruik van vierkante haken. We werken vanzelfsprekend de vorm binnen de vierkante haken zo ver mogelijk uit.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+(x + 5y) (2x - 7y) - (x + 5y)^2
+&= (x + 5y) (2x - 7y) - (x + 5y) (x + 5y)\\
+&= (x + 5y) [(2x - 7y) - (x + 5y)]\\
+&= (x + 5y) (2x - 7y - x - 5y)\\
+&= (x + 5y) (x - 12y)\\
+\end{align*}
+
+Merk op: $(x + 5y)^2 = (x + 5y) (x + 5y)$
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+(3a - b) (2p - q) - (a - 3b) (q - 2p)
+&= (3a - b) (2p - q) + (a - 3b) (2p - q)\\
+&= (2p - q) [(3a - b) + (a - 3b)]\\
+&= (2p - q) (3a - b + a- 3b)\\
+&= (2p - q) (4a - 4b)\\
+&= 4 (2p- q) (a - b)\\
+\end{align*}
+
+In de oorspronkelijke veelterm was geen gemeenschappelijke factor. Slechts na een geschikte verandering van teken kwam alles terecht.
+
+Let er ook op, hoe we op het einde van de oefening uit de tweede factor de gemeenschappelijke factor 4 naar buiten brachten.
+\end{voorbeeld}
+
+Een ontbinding in factoren is slechts af, als we alles volledig ontbonden hebben.
+
+\begin{exercise}
+Ontbind:
+\begin{enumerate}[(a)]
+  \item $(3a + 5b) (x - y) - (x - y) (2a - 7b)$
+  \item $4 (3x - 7y) (a + 5b) + 7 (3x - 7y) (2a - 3b)$
+  \item $(a - 3b) (2a + 7b) - (a - 3b)^2$
+  \item $(x + y)^3 - (x + y)^2$
+  \item $7 (a - 3b) (3x + 2y) + 3 (3b - a) (7x + y)$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+  \item $\begin{aligned}[t](3a + 5b) (x - y) - (x - y) (2a - 7b)
+  &= (x - y) [(3a + 5b) - (2a - 7b)]\\
+  &= (x - y) (3a + 5b - 2a + 7b)\\
+	&= (x - y) (a + 12b)\end{aligned}$
+  \item $\begin{aligned}[t]4 (3x - 7y) (a + 5b) + 7 (3x - 7y) (2a - 3b)
+  &= (3x - 7y) [4 (a + 5b) + 7 (2a - 3b)]\\
+	&= (3x - 7y) (4a + 20b + 14a - 21b)\\
+	&= (3x - 7y) (18a - b)\end{aligned}$
+  \item $\begin{aligned}[t](a - 3b) (2a + 7b) - (a - 3b)^2
+  &= (a - 3b) (2a + 7b) - (a - 3b)(a - 3b)\\
+	&= (a - 3b) [(2a + 7b) - (a - 3b)]\\
+	&= (a - 3b) (2a + 7b - a + 3b)\\
+	&= (a - 3b) (a + 10b)\end{aligned}$
+  \item $\begin{aligned}[t](x + y)^3 - (x + y)^2
+  &= (x + y)^2 (x + y) - (x + y)^2\\
+	&= (x + y)^2 [(x + y) - 1]\\
+	&= (x + y)^2 (x + y - 1)\end{aligned}$
+  \item $\begin{aligned}[t]7 (a - 3b) (3x + 2y) + 3 (3b - a) (7x + y)
+  &= 7 (a - 3b) (3x + 2y) - 3 (a - 3b) (7x + y)\\
+	&= (a - 3b) [7 (3x + 2y) - 3 (7x + y)]\\
+	&= (a - 3b) (21 x + 14y - 21 x - 3y)\\
+	&= (a - 3b) (11y)\\
+	&= 11y (a - 3b)\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\subsection{Ontbinden door samennemen van veeltermen}
+
+De volgende twee veeltermen (tweetermen)
+$$10ax + 15x	\qquad\mbox{ en }\qquad	4ay + 6y$$
+kunnen we reeds schrijven als een product van factoren:
+$$10ax + 15x = 5x (2a + 3)	\qquad\mbox{ en }\qquad 4ay + 6y = 2y (2a + 3)$$
+Als we nu even de twee veeltermen (tweetermen) samenbrengen, dan hebben we de volgende vierterm:
+$$10ax + 15x + 4ay + 6y$$
+Het is duidelijk dat het nu onmogelijk is een factor te vinden die gemeenschappelijk is bij elk van de vier termen.
+
+Als we nu echter de vierterm, door het invoeren van haakjes, splitsen in twee groepen van elk twee termen, dan is het mogelijk per groepje een gemeenschappelijke factor buiten haakjes te brengen.
+
+\begin{align*}
+10ax + 15x + 4ay + 6y	&= (10ax + 15x) + (4ay + 6y)\\
+                      &= 5x (2a + 3) + 2y (2a + 3)
+\end{align*}
+
+Zo zien we dat er nu wel een tweeterm als gemeenschappelijke factor te voorschijn komt.
+Door verdere ontbinding bekomen we dan:
+$$(2a + 3) (5x + 2y)$$
+De gegeven vierterm is ontbonden in factoren door het {\bf samennemen van termen}.
+
+\subsubsection*{Werkwijze}
+
+Om een veelterm te ontbinden door samennemen van termen moeten we:
+\begin{enumerate}
+  \item de termen zo samennemen dat, na het buiten haakjes brengen van een gemeenschappelijke factor, per groep opnieuw een gemeenschappelijke factor te voorschijn komt;
+  \item dan die gemeenschappelijke factor op zijn beurt buiten haakjes brengen.
+\end{enumerate}
+
+Het samennemen van termen komt neer op een herhaaldelijk toepassen van het buiten haakjes brengen van de gemeenschappelijke factor.
+
+\subsubsection*{Opmerkingen}
+
+\begin{itemize}
+  \item Laten we even het voorbeeld opnieuw bekijken:
+  \begin{align*}
+    (10ax + 15x) + (4ay + 6y)	&= 5x (2a + 3) + 2y (2a + 3)\\
+		                          &= (2a + 3) (5x + 2y)
+  \end{align*}
+  Hier hebben we de eerste en tweede term en dan de twee andere termen samengenomen, maar we kunnen ook anders groeperen:
+  \begin{align*}
+  10ax + 15x + 4ay + 6y	&= (10ax + 4ay) + (15x + 6y)\\
+                        &= 2a (5x + 2y) + 3 (5x + 2y)\\
+                        &= (5x + 2y) (2a + 3)
+  \end{align*}
+  Merk op dat we hetzelfde resultaat bekomen.
+  \item Je dient er vooral op te letten dat je in elke groep een gemeenschappelijke factor hebt en dat je binnen de haakjes een factor overhoudt die gemeenschappelijk is. Wanneer je de termen verkeerd gegroepeerd hebt, aarzel dan nooit om een nieuwe hergroepering te beginnen.
+  \item Het samennemen van termen is een methode die in aanmerking komt voor om het even welke soort veelterm. In hoofdzaak wordt die methode toegepast bij viertermen (2 groepjes van 2 termen) of bij zestermen (2 groepjes van 3 termen ofwel 3 groepjes van 2 termen).
+\end{itemize}
+
+\begin{voorbeeld}
+\begin{align*}
+12x^2 - 8x - 15x + 10	&= (12x2 - 8x) - (15x - 10)\\
+                      &= 4x (3x - 2) - 5 (3x - 2)\\
+                      &= (3x - 2) (4x - 5)
+\end{align*}
+Let op het teken: min vóór de haakjes doet de tekens erbinnen veranderen.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+xy + 2 + x + 2y	&= (xy + x) + (2y + 2)\\
+                &= x (y + 1) + 2 (y + 1)\\
+                &= (y + 1) (x + 2)
+\end{align*}
+Merk op dat we de volgorde van de termen veranderd hebben.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+2ax - 3bx + 6by - 4ay	&= (2ax - 3bx) + (6by - 4ay)\\
+                      &= x (2a - 3b) + 2y (3b - 2a)\\
+                      &= x (2a - 3b) - 2y (2a - 3b)\\
+                      &= (2a - 3b) (x - 2y)
+\end{align*}
+Let op de tekenverandering op de derde regel.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+10ax - 15bx + 5cx - 2ay + 3by - cy &= (10ax - 15bx + 5cx) - (2ay - 3by + cy)\\
+                                   &= 5x (2a - 3b + c) - y (2a - 3b + c)\\
+                                   &= (2a - 3b + c) (5x - y)
+\end{align*}
+ofwel
+\begin{align*}
+10ax - 15bx + 5cx - 2ay + 3by - cy &= (10ax - 2ay) - (15bx - 3by) + (5cx - cy)\\
+                                   &= 2a (5x - y) - 3b (5x - y) + c (5x - y)\\
+                                   &= (5x - y) (2a - 3b + c)
+\end{align*}
+Zoals je vaststelt, kunnen we hier 2 groepjes van 3 termen of 3 groepjes van 2 termen gebruiken.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+$$a^2x + abx + ac + b^2y + aby + bc$$
+
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+&= (a^2x + aby + ac) + (abx + b^2y + bc)\\
+&= a (ax + by + c) + b (ax + by + c)\\
+&= (ax + by + c) (a + b)
+\end{align*}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\centering of
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{align*}
+&=(a^2x + abx) + (b^2y + aby) + (ac + bc)\\
+&= ax (a + b) + by (b + a) + c (a + b)\\
+&= (a + b) (ax + by + c)
+\end{align*}
+\end{minipage}\\[0.5cm]
+Het is belangrijk de geschikte termen bij elkaar te plaatsen!
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+  & a^8 + a^7 + a^6 + a^5 + a^4 + a^3 + a^2 + a + 1\\
+  &= (a^8 + a^7 +a^6) + (a^5 + a^4 + a^3) + (a^2 + a + 1)\\
+  &= a^6 (a^2 + a + 1) + a^3 (a^2 + a + 1) + (a^2 + a + 1)\\
+  &= (a^2 + a + 1) (a^6 + a^3 + 1)
+\end{align*}
+Omdat 9 niet deelbaar is door 2 kunnen we hier enkel groepjes van 3 termen nemen.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+x^7 + x^6 + x^5 + x^4 + x^3 + x^2 + x + 1
+&= (x^7 + x^6) + (x^5 + x^4) + (x^3 + x^2) + (x + 1)\\
+&= x^6 (x + 1) + x^4 (x + 1) + x^2 (x + 1) + (x + 1)\\
+&= (x + 1) (\underline{x^6 + x^4} + \underline{x^2 + 1})\\
+&= (x + 1) [(x^6 + x^4) + (x^2 + 1)]\\
+&= (x + 1) [x^4(x^2 + 1) + (x^2 + 1)]\\
+&= (x + 1) [(x^2 + 1) (x^4 + 1)]\\
+&= (x + 1) (x^2 + 1) (x^4 + 1)
+\end{align*}
+
+Controleer steeds of de bekomen factoren nog verder kunnen ontbonden worden!
+Door het samennemen van termen kon de tweede factor van de vierde regel eveneens geschreven worden als een product.
+\end{voorbeeld}
+
+Tracht nu de volgende opgaven te maken om de behandelde methode in te oefenen.
+
+\begin{exercise}
+Ontbind in factoren door samennemen van termen:
+\begin{enumerate}[(a)]
+  \item $20x^2 - 24xy + 15xz - 18yz$
+  \item $2ab^2 + 3b^3 - 4ac - 6bc$
+  \item $2a^2 - 2a + a - 1$
+  \item $x3 + x2 + 3x + 3$
+  \item $2x^3 + 4ax^2 - 3a^2x - 6a^3$
+  \item $2ax - 3by + 4az + 3bx - 2ay + 6bz$
+  \item $3a^2x - 6axy - 10a^2y^2 + 5a^3y$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+  \item $\begin{aligned}[t]20x^2 - 24xy + 15xz - 18yz
+      &= (20x^2 - 24xy) + (15xz - 18yz)\\
+			&= 4x (5x - 6y) + 3z (5x - 6y)\\
+			&= (5x - 6y) (4x + 3z)
+  \end{aligned}$
+  \item $\begin{aligned}[t]2ab^2 + 3b^3 - 4ac - 6bc
+      &= (2ab^2 - 4ac) + (3b^3 - 6bc)\\
+			&= 2a (b^2 - 2c) + 3b (b^2 - 2c)\\
+			&= (b^2 - 2c) (2a + 3b) \end{aligned}$
+			
+			Bekijk eerst even de coefficienten bij het groeperen van termen! Hieraan zie je meestal onmiddellijk welke termen bij elkaar horen.
+	\item $\begin{aligned}[t]x3 + x2 + 3x + 3	
+	    &= (x^3 + x^2) + (3x + 3)\\
+			&= x^2 (x + 1) + 3 (x + 1)\\
+			&= (x + 1) (x^2 + 3)
+  \end{aligned}$
+  \item $\begin{aligned}[t]2a^2 - 2a + a - 1
+      &= (2a^2 - 2a) + (a - 1)\\
+			&= 2a (a - 1) + (a - 1)\\
+			&= (a - 1) (2a + 1)
+  \end{aligned}$
+  \item $\begin{aligned}[t]2x^3 + 4ax^2 - 3a^2x - 6a^3
+      &= (2x^3 + 4ax^2) - (3a^2x + 6a^3)\\
+			&= (2x^2 (x + 2a) - 3a^2 (x + 2a))\\
+			&= (x + 2a) (2x^2 - 3a^2)
+  \end{aligned}$
+  \item $\begin{aligned}[t]2ax - 3by + 4az + 3bx - 2ay + 6bz
+    &= (2ax + 4az - 2ay) + (3bx + 6bz - 3by)\\
+		&= 2a (x + 2z - y) + 3b (x + 2z - y)\\
+		&= (x + 2z - y) (2a + 3b)
+  \end{aligned}$
+  \item $\begin{aligned}[t]3a^2x - 6axy - 10a^2y^2 + 5a^3y
+    &= a (3ax - 6xy - 10ay^2 + 5a^2y)\\
+		&= a [(3ax - 6xy) - (10ay^2 - 5a^2y)]\\
+		&= a [3x (a - 2y) - 5ay (2y - a)]\\
+		&= a [3x (a - 2y) + 5ay (a - 2y)]\\
+		&= a [(a - 2y) (3x + 5ay)]\\
+		&= a (a - 2y) (3x + 5ay)
+  \end{aligned}$
+		
+		Eerst de gemeenschappelijke factor $a$ van al de termen van de veelterm buiten haakjes brengen.
+\end{enumerate}
+\end{solution}
+
+\begin{exercise}
+Als we een veelterm in factoren ontbinden, dan zijn de factoren:
+\begin{enumerate}[A  ]
+  \item altijd van een lagere graad dan de veelterm;
+  \item meestal van een lagere graad dan de veelterm;
+  \item soms van een lagere graad dan de veelterm;
+  \item nooit van een lagere graad dan de veelterm.
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+B -- De factoren zijn altijd van een lagere graad dan de veelterm, behalve in een geval: als alleen een cijferfactor buiten de haakjes gebracht wordt.
+\end{solution}
+
+\begin{onthoud}
+Gemeenschappelijke factor van de termen van een veelterm:
+\begin{description}
+  \item[coëfficiënt]  ggd van de coëfficiënten van de veelterm
+  \item[lettergedeelte] bevat alle gemeenschappelijke letterfactoren, elk met hun 
+			kleinst voorkomende exponent.
+\end{description}
+Als niet alle termen een gemene factor hebben, probeer dan te ontbinden door samennemen van termen.
+\end{onthoud}
+
+\newpage
+\section*{Oplossingen A.C.O.}
+
+\immediate\closeout\solutionstream
+\input{\jobname.sol}
+
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,565 @@
+\documentclass[12pt]{article}
+
+\include{bis}
+
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows}
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Volgende wijzigingen werden aangebracht tov de originele bis-basis
+% * gebruik linkerlid en rechterlid ipv eerste lid en tweede lid
+% * extra voorbeelden bij oplossen van een vergelijking uit het hoofd
+% * gebruik van equivalent met (<=>) waar gepast
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% * volgende opmerkingen heb ik nog
+% * er wordt niet gesproken over referentieverzameling
+% * de oplossingenverzameling wordt niet genoteerd
+
+\lhead{}
+\rhead{BIS-Basis -- Les 16}
+
+\begin{document}
+
+\ConfigureExSol
+
+\setcounter{section}{15}
+\section{Vergelijkingen}
+
+
+\subsection{Begrippen}
+
+Deze les sluit nauw aan bij les 6, gelijkheden en ongelijkheden.
+$$5 + 4 = 9 \mbox{ is een gelijkheid.}$$
+Indien een term uit een gelijkheid onbekend is, noemen we deze gelijkheid een {\bf vergelijking}.
+$$5 + ? = 9$$
+Het onbekende getal wordt voorgesteld door een letter, meestal $x$.
+$$5 + x = 9$$
+In deze vergelijking is $5 + x$ het {\bf linkerlid} en $9$ het {\bf rechterlid}.
+$x$ is de {\bf onbekende}.
+Vervang je $x$ door $4$, dan bekom je een gelijkheid. We noemen $4$ een {\bf oplossing} van deze vergelijking.
+Een vergelijking oplossen betekent de waarde van de onbekende $x$ bepalen, zodat de vergelijking een gelijkheid wordt.
+
+\subsection{Oplossen van een vergelijking uit het hoofd}
+
+Sommige vergelijkingen kan je gemakkelijk uit het hoofd oplossen.
+
+\begin{voorbeeld*}
+\begin{center}
+  \begin{tabular}{c|c|c}
+  Vergelijking & Oplossing & Reden\\
+  \hline
+  $x+6 = 13$ & $x=7$ & $7+6=13$\\
+  $30 - x = 16$ &	$x = 14$ & $30 - 14 = 16$\\
+  $\dfrac{x}{5} = 20$ & $x = 100$	& $100 : 5 = 20$\\
+  $3x = 27$	& $x = 9$	&	$3\cdot 9 = 27$\\
+  $x^2=4$ & $x=-2$ of $x=2$ & $(-2)^2=4$ en $2^2=4$\\
+  $\sqrt{x}=3$ & $x=9$ & $\sqrt{9}=3$\\
+  $\dfrac{5}{x}=1$ & $x=5$ & $\dfrac{5}{5}=1$
+  \end{tabular}
+\end{center}
+\end{voorbeeld*}
+
+Let op: In een vergelijking wordt het maalteken voorgesteld door een ‘$\cdot$’ of, indien mogelijk, weggelaten. Dit doet men om verwarring met de onbekende $x$ te vermijden.
+
+\subsection{Basisregels voor het oplossen van vergelijkingen}
+
+Moeilijkere vergelijkingen, bv. $3x - 7 = 5 \cdot (2x + 3)$ kan je niet uit het hoofd oplossen. Hiervoor bestaat een oplossingsmethode.
+Deze methode wordt stap voor stap uitgewerkt, beginnend vanuit eenvoudige voorbeelden.
+
+\subsubsection{Term overbrengen}
+
+\begin{voorbeeld}
+\begin{align*}
+x + 9 &= - 5
+\intertext{Een vergelijking oplossen is de waarde van $x$ bepalen.
+We zorgen ervoor dat $x$ in het linkerlid staat en alle andere termen in het rechterlid.}
+x + 9 - 9 &= - 5 - 9 \qquad\mbox{(links en rechts dezelfde bewerking)}
+\intertext{We trekken van beide leden $9$ af. Zo bekomen we opnieuw een gelijkheid.}
+x &= - 5 - 9 	\qquad(+ 9 - 9 = 0)\\
+x &= - 14
+\end{align*}
+Om te controleren of de bekomen oplossing klopt, vervang je, in de oorspronkelijke vergelijking, $x$ door het bekomen resultaat en controleer je of je een gelijkheid bekomt.
+
+{\em Controle: }\\
+$$
+\begin{rcases*}
+\mbox{LL } = x + 9 = - 14 + 9 = - 5\;\\
+\mbox{RL } = - 5
+\end{rcases*} \Rightarrow \mbox{LL ${=\joinrel=}$ RL, dus OK}
+$$
+
+Om een {\bf term} uit een lid te verwijderen, vermeerder je beide leden met het tegengestelde van die term.
+
+{\em Praktische werkwijze: }\\
+\begin{alignat*}{2}
+     &&x + \underline{9}_{\tikzmark{a}}	&= - 5\tikzmark{b}\\
+\LRA &&     x	&= - 5 - 9\\
+\LRA &&     x	&= - 14
+\begin{tikzpicture}[overlay,remember picture,out=315,in=225,distance=0.5cm]
+\draw[-stealth,shorten >=4pt,shorten <=-2pt] (a.center) to (b.center);
+\end{tikzpicture}
+\end{alignat*}
+
+{\em Opmerking:}\\
+De drie bovenstaande vergelijkingen zijn equivalent. Dit wil zeggen dat ze alle drie dezelfde oplossingen hebben. We duiden dit aan met een '$\Leftrightarrow$'.
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{align*}
+x - 17 &= 6
+\intertext{Breng de term zonder $x$ naar het rechterlid. Doe dit door links en rechts 17 op te tellen.}
+x - 17 + 17 &= 6 + 17\\
+x &= 23
+\end{align*}
+{\em Controle: } \vglproef{23-17=6}{6}
+
+{\em Praktische werkwijze:}\\
+\begin{alignat*}{2}
+     &&x \underline{- 17}_{\tikzmark{a}}	&= 6\tikzmark{b}\\
+\LRA &&x	    &= 6 + 17\\
+\LRA &&x	    &= 23
+\begin{tikzpicture}[overlay,remember picture,out=315,in=225,distance=0.5cm]
+\draw[-stealth,shorten >=4pt,shorten <=-2pt] (a.center) to (b.center);
+\end{tikzpicture}
+\end{alignat*}
+
+\end{voorbeeld}
+
+\subsubsection{Factor overbrengen}
+
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 3x &= - 24\\
+\intertext{De onbekende $x$ wordt links vermenigvuldigd met 3, we kunnen dit vermijden door beide leden te delen door 3.}
+\LRA && 3x\cdot \dfrac{1}{3} &= -24\cdot \dfrac{1}{3}\\
+\LRA && x &= -8
+\end{alignat*}
+
+{\em Controle: } \vglproef{$3\cdot(-8)=-24$}{$-24$}
+
+{\em Praktische werkwijze:}\\
+
+\begin{alignat*}{2}
+     && \tikzmark{a}3\cdot x &= -24\tikzmark{b}\\
+\LRA &&   x &= -24 : 3\\
+\LRA &&   x &= -8
+\begin{tikzpicture}[overlay,remember picture,out=315,in=225,distance=0.5cm]
+\draw[-stealth,shorten >=4pt,shorten <=4pt] (a.center) to (b.center);
+\end{tikzpicture}
+\end{alignat*}
+
+Als een factor van lid verandert, deel je door die factor.
+
+{\em Controle: } \vglproef{$3\cdot -8=-24$}{$-24$}
+
+\end{voorbeeld}
+
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && \underline{-5}_{\tikzmark{a}}\cdot x &= \tikzmark{b}\dfrac{2}{7}\\
+\LRA &&   x &= \dfrac{2}{7}\cdot\dfrac{-1}{5}\\
+\LRA &&   x &= -\dfrac{2}{35}
+\end{alignat*}
+
+\begin{tikzpicture}[overlay,remember picture,out=315,in=225,distance=0.5cm]
+\draw[-stealth,shorten >=4pt,shorten <=-2pt] (a.center) to (b.center);
+\end{tikzpicture}
+
+Als een factor van lid verandert kunnen we in plaats van te delen door die factor ook vermenigvuldigen met de omgekeerde van de factor.
+
+{\em Controle: } \vglproef{$-5\cdot\dfrac{-2}{35}=\dfrac{2}{7}$}{$\dfrac{2}{7}$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+
+\begin{minipage}{0.5\textwidth}
+\begin{alignat*}{2}
+    && x : (-4) &= 9\\
+\LRA&& x &= 9 \cdot(-4)\\
+\LRA&&x &= -36
+\end{alignat*}
+\end{minipage}
+\begin{minipage}[t]{0.5\textwidth}
+Delen door $-4$ is gelijk aan vermenigvuldigen met $-\frac{1}{4}$. Veranderen van lid is vermenigvuldigen met het omgekeerde. Het omgekeerde van $-\frac{1}{4}$ is $-4$. M.a.w. delen door $-4$ wordt bij overbrenging vermenigvuldigen met $-4$.
+\end{minipage}
+\end{voorbeeld}
+{\em Controle: }\\\vglproef{x:(-4)=-36:(-4)=9}{9}
+
+\subsubsection{Gemengde oefeningen}
+
+Indien er in een oefening verschillende termen met $x$ voorkomen, stelt deze $x$ steeds hetzelfde getal voor.
+
+Breng alle termen waarin een $x$ voorkomt naar het linkerlid, alle termen zonder $x$ naar het rechterlid.
+
+\newcommand{\underwrite}[2]{
+\underset{#2}{\underline{#1}}
+}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && x-\underwrite{5}{\rightarrow}  &= 7-\underwrite{3x}{\leftarrow}\\
+\LRA && x + 3x &= 7 + 5 \\
+\LRA && 4x &= 12 \qquad \text{Maak in beide leden de som van de termen.}\\
+\LRA && x&=\dfrac{12}{4} \qquad\text{Deel beide leden door 4.}\\
+\LRA && x&=3 \\
+\end{alignat*}
+{\em Controle: }\\\vglproef{$x-5=3-5=-2$}{$7-3x=7-3\cdot3=7-9=-2$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 2x\underwrite{-5}{\rightarrow}  &= \underwrite{5x}{\leftarrow}+7\\
+\LRA && 2x-5x &= 7+5 \qquad\text{Alle onbekenden naar links, alle bekenden naar rechts.} \\
+\LRA && -3x   &= 12 \qquad \text{Bereken de som van de termen.}\\
+\LRA && x     &=\dfrac{12}{-3} \qquad\text{De factor $-3$ verplaatsen, let op: het teken wijzigt niet.}\\
+\LRA && x     &= -4 \\
+\end{alignat*}
+{\em Controle: }\\\vglproef{$2(-4)-5=-13$}{$5(-4)+7=-13$}
+\end{voorbeeld}
+
+Let op bij de controle: vul de gevonden oplossing steeds in de oorspronkelijke opgave in voordat je enige bewerking uitvoert.
+
+\begin{exercise}
+Los volgende vergelijkingen op:
+\begin{enumerate}[(a)]
+  \item $x+3=-10$
+  \item $-3x=-12$
+  \item $- 2x + 12 = - 20$
+  \item $9x + 7 = 3 - 11x$
+  \item $0,9x = 6 + 0,3x$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+\item $\begin{aligned}[t]
+     && x+3 &= -10\\
+\LRA &&   x &= -10 -3\\
+\LRA &&   x &= -13
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && -3x &= -12\\
+\LRA &&   x &= \dfrac{-12}{-3}\\
+\LRA &&   x &= 4
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && - 2x + 12	&= - 20\\
+\LRA &&      - 2x &= - 20 - 12\\
+\LRA &&      - 2x &= - 32\\
+\LRA &&        x	&= \dfrac{-32}{-2}\\
+\LRA &&        x  &= 16
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && 9x + 7 &= 3 - 11x\\
+\LRA && 9x + 11x	&= 3 - 7\\
+\LRA && 20x	&= - 4\\
+\LRA && x &= \dfrac{-4}{20}\\
+\LRA && x &= -\dfrac{1}{5}\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && 0,9x	&= 6 + 0,3x \\
+\LRA && 0,9x - 0,3x	&= 6\\
+\LRA && 0,6x	&= 6\\
+\LRA && x	&= \dfrac{6}{0.6} \\
+\LRA && x &= 10\\
+\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\subsection{Vergelijkingen met haakjes}
+Indien er in een vergelijking haakjes voorkomen, werken we die eerst weg.
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && - 2 (5 - x)	&= 7 (x + 5)\\
+\intertext{een getal maal een som: verdrijf de haakjes door toepassing van de distributieve eigenschap}
+\LRA && \underwrite{-10}{\rightarrow} + 2x &= \underwrite{7x}{\leftarrow} + 35 \\
+\LRA && 2x - 7x	&= 35 + 10\\
+\LRA && - 5x	&= 45\\
+\LRA && x	&= 45 : (- 5) \\
+\LRA && x &= -9
+\end{alignat*}
+{\em Controle: }\\\vglproef{$-2(5-x)=-2(5-(-9))=-28$}{$7(x+5)=7(-9+5)=-28$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 8 - (4x + 5) &= 2x + 6 + (7 - x)\\
+\intertext{+ of - voor de haakjes : verdrijf de haakjes door toepassing van de haakjesregel}
+\LRA && \underwrite{8}{\rightarrow}-4x\underwrite{-5}{\rightarrow} &= \underwrite{2x}{\leftarrow}+6+7\underwrite{-x}{\leftarrow} \\
+\LRA && 	- 4x - 2x + x	&= 6 + 7 - 8 + 5 \\
+\LRA &&  - 5x	&= 10\\
+\LRA &&  x	&= 10 : (- 5)\\
+\LRA &&  x	&= - 2\\
+\end{alignat*}
+{\em Controle: }\\\vglproef{$8 - (4 (- 2) + 5 )= 11$}{$2 (- 2) + 6 + (7 - (- 2))=11$}
+\end{voorbeeld}
+
+\begin{exercise}
+Los volgende vergelijkingen op en maak de proef:
+\begin{enumerate}[(a)]
+  \item $4 (- x + 5) = 2 (3x - 7)$
+  \item $7 - (2x - 5) = - 2 (5x + 3)$
+  \item $(7 - x) - 2 (x + 1) = 29 + x$
+  \item $40 - 3 (x + 3) = 60 - (5x + 15)$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+\item $\begin{aligned}[t]
+     && 4(- x + 5)	&= 2(3x - 7)\\
+\LRA &&   - 4x + 20	&= 6x - 14\\
+\LRA &&   - 4x - 6x	&= -14 - 20\\
+\LRA &&   - 10x	&= -34\\
+\LRA &&   x	&= 3.4\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && 7 - (2x - 5)	&= - 2(5x + 3)\\
+\LRA && 7 - 2x + 5	&= - 10x - 6\\
+\LRA && - 2x + 10x	&= - 6 - 7 - 5\\
+\LRA && 8x	&= - 18\\
+\LRA && x	&= \dfrac{-18}{8}\\
+\LRA && x	&= -\dfrac{9}{4}\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && (7 - x) - 2(x + 1)	&= 29 + x\\
+\LRA && 7 - x - 2x - 2	&= 29 + x\\
+\LRA && - x - 2x - x	&= 29 - 7 + 2\\
+\LRA && - 4x	&= 24\\
+\LRA && x	&= - 6\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && 40 - 3(x + 3)	&= 60 - (5x + 15)\\
+\LRA && 40 - 3x - 9	&= 60 - 5x - 15\\
+\LRA && - 3x + 5x	&= 60 - 15 - 40 + 9\\
+\LRA && 2x	&= 14\\
+\LRA && x	&= 7\\
+\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\subsection{Vergelijkingen met breuken}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && \dfrac{4}{5}x-\dfrac{1}{2}&=\dfrac{2}{3}x+7\\
+\intertext{7 herschrijf je als $\dfrac{7}{1}$, maak dan alle breuken gelijknamig}
+\LRA && \dfrac{24}{30}x-\dfrac{15}{30}&=\dfrac{20}{30}x+\dfrac{210}{30}\\
+\intertext{Vermenigvuldig beide leden met de gemeenschappelijke noemer 30.
+	Als we beide leden van een gelijkheid vermenigvuldigen met eenzelfde getal, blijft de gelijkheid behouden.}
+\LRA && 30\cdot\left(\dfrac{24}{30}x-\dfrac{15}{30}\right)&=30\cdot\left(\dfrac{20}{30}x+\dfrac{210}{30}\right)\\
+\intertext{Werk de haakjes uit (distributieve eigenschap) en vereenvoudig iedere term.}
+\LRA && \dfrac{30\cdot24}{30}x-\dfrac{30\cdot15}{30}&=\dfrac{30\cdot20}{30}x+\dfrac{30\cdot210}{30}\\
+\LRA && 24x-15 &= 20x+210 \\
+\intertext{Als we beide leden vermenigvuldigen met de noemer, valt de noemer weg.
+	Vergelijk de laatste regel met de tweede regel uit de oefening.
+	Werk nu verder uit op de gewone manier.}
+\LRA && 24x-20x &= 210+15 \\
+\LRA && 4x &= 225 \\
+\LRA && x &= \dfrac{225}{4}
+\end{alignat*}
+{\em Controle: }\\\vglproef{$\dfrac{4}{5}\cdot\dfrac{225}{4}-\dfrac{1}{2}=\dfrac{89}{2}$}{$\dfrac{2}{3}\cdot\dfrac{225}{4}+7=\dfrac{89}{2}$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 6-\dfrac{4}{3}x &= 11-\dfrac{7}{4}x \qquad\text{Noemer $= 12$}\\
+\LRA && \dfrac{72}{12}-\dfrac{16}{12}x &= \dfrac{132}{12}-\dfrac{21}{12}x \qquad\text{Noemer verdrijven ($\times 12$)}\\
+\LRA && \underwrite{72}{\rightarrow}-16x&=132\underwrite{-21x}{\leftarrow}\\
+\LRA && - 16x + 21x	&= 132 - 72\\
+\LRA && 5x	&= 60\\
+\LRA && x	&= \dfrac{60}{5}\\
+\LRA && x	&= 12
+\end{alignat*}
+{\em Controle: }\\\vglproef{$6-\dfrac{4}{3}\cdot 12 = -10$}{$11-\dfrac{7}{4}x=-10$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 2x-5 &= \dfrac{x-2}{3} + \dfrac{2}{3} \qquad\text{Noemer $= 3$}\\
+\LRA && \dfrac{6x}{3}-\dfrac{15}{3} &= \dfrac{x-2}{3} + \dfrac{2}{3} \qquad\text{Noemer verdrijven ($\times 3$)}\\
+\LRA && 6x - 15	&= x - 2 + 2\\
+\LRA && 6x - x	&= 15\\
+\LRA && 5x	&= 15\\
+\LRA && x	&= 3\\
+\end{alignat*}
+{\em Controle: }\\\vglproef{$2\cdot 3 - 5=1$}{$\dfrac{3-2}{3}+\dfrac{2}{3}=1$}
+\end{voorbeeld}
+
+\begin{onthoud}
+Vergelijkingen waarin breuken voorkomen:
+\begin{itemize}
+  \item maak de breuken gelijknamig
+  \item werk de noemer weg, door beide leden te vermenigvuldigen met de gemeenschappelijke noemer
+  \item werk verder uit
+\end{itemize}
+\end{onthoud}
+
+\begin{voorbeeld}
+Een vergelijking waarbij een minteken voor de breukstreep staat, verdient bijzondere aandacht.
+\begin{alignat*}{2}
+     && 8-\dfrac{2x-1}{3} &= x \qquad\text{Maak gelijknamig: noemer $= 3$}\\
+\LRA && \dfrac{24}{3}-\dfrac{2x-1}{3} &= \dfrac{3x}{3}\\
+\intertext{Verdrijf de noemer. Let op het minteken voor de breukstreep. Dit minteken hoort bij alle termen uit de teller. Daarom zetten we de teller tussen haakjes.}
+\LRA && 24 - (2x - 1)	&= 3x	\qquad\text{Verdrijf de haakjes.}\\
+\LRA && 24 - 2x + 1	&= 3x\\
+\LRA && - 2x - 3x	&= - 1 - 24 \qquad\text{Groepeer de termen.}\\
+\LRA && - 5x	&= - 25\\
+\LRA && x	&= \dfrac{25}{5}\\ 
+\LRA && x	&= 5\\
+\end{alignat*}
+{\em Controle: }\\\vglproef{$8-\dfrac{2\cdot 5-1}{3}=5$}{$5$}
+\end{voorbeeld}
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 10 - \dfrac{x-2}{5} &= \dfrac{8(15-x)}{3} \qquad\text{Verdrijf de haakjes d.m.v. de distr. eigenschap.}\\
+\LRA && 10 - \dfrac{x-2}{5} &= \dfrac{120-8x}{3} \qquad\text{Maak de breuken gelijknamig.}\\
+\LRA && \dfrac{150}{15} - \dfrac{3x-6}{15} &= \dfrac{600-40x}{15}	\qquad\text{Werk de noemer weg.}\\
+\LRA && 150 - (3x -6) &= 600 - 40x\\
+\LRA && 150 - 3x + 6	&= 600 - 40x\\
+\LRA && - 3x + 40x	&= 600 - 150 - 6\\
+\LRA && 37x	&= 444\\
+\LRA && x	&= \dfrac{444}{37}\\
+\LRA && x	&= 12
+\end{alignat*}
+{\em Controle: }\\\vglproef{$10-\dfrac{12-2}{5}=8$}{$\dfrac{8(15-12)}{3}=8$}
+\end{voorbeeld}
+
+\begin{exercise}
+Los volgende vergelijkingen op:
+\begin{enumerate}[(a)]
+  \item $\dfrac{x+2}{6}=\dfrac{x-5}{4}$
+  \item $\dfrac{4}{3}x-\dfrac{5}{2}=\dfrac{1}{5}x-\dfrac{1}{2}+\dfrac{1}{3}x$
+  \item $\dfrac{x-4}{3}-\dfrac{x+3}{5}=\dfrac{x}{15}$
+  \item $x-\dfrac{3x+3}{6}=\dfrac{3(x+1)}{4}$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+\item $\begin{aligned}[t]
+     && \dfrac{x+2}{6}&=\dfrac{x-5}{4}\\
+\LRA && \dfrac{2x+4}{12}&=\dfrac{3x-15}{12}\\
+\LRA && 2x + 4	&= 3x - 15\\
+\LRA && 2x - 3x	&= - 15 - 4\\
+\LRA && - x	&= - 19\\
+\LRA && x	&= 19\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && \dfrac{4}{3}x-\dfrac{5}{2}&=\dfrac{1}{5}x-\dfrac{1}{2}+\dfrac{1}{3}x\\
+\LRA && \dfrac{40}{30}x-\dfrac{75}{30}&=\dfrac{6}{30}x-\dfrac{15}{30}+\dfrac{10}{30}x\\
+\LRA && 40x - 75	&= 6x - 15 + 10x\\
+\LRA && 40x - 6x - 10x	&= - 15 + 75\\
+\LRA && 24x	&= 60\\
+\LRA && x	&= \dfrac{60}{24}\\
+\LRA && x	&= \dfrac{5}{2}\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && \dfrac{x-4}{3}-\dfrac{x+3}{5}&=\dfrac{x}{15}\\
+\LRA && \dfrac{5x-20}{15}-\dfrac{3x+9}{15}&=\dfrac{x}{15}\\
+\LRA && 5x - 20 - (3x + 9)	&= x\\
+\LRA && 5x - 20 - 3x - 9	&= x\\
+\LRA && 5x - 3x - x	&= 20 + 9\\
+\LRA && x	&= 29\\
+\end{aligned}$
+\item $\begin{aligned}[t]
+     && x-\dfrac{3x+3}{6}&=\dfrac{3(x+1)}{4}\\
+\LRA && x-\dfrac{3x+3}{6}&=\dfrac{3x+3)}{4}\\
+\LRA && \dfrac{12x}{12}-\dfrac{6x+6}{12}&=\dfrac{9x+9)}{12}\\
+\LRA && 12x - 6x - 6	&= 9x + 9\\
+\LRA && 12x - 6x - 9x	&= 9 + 6\\
+\LRA && - 3x	&= 15\\
+\LRA && x	&= - 5\\
+\end{aligned}$
+\end{enumerate}
+\end{solution}
+
+\subsection{Aantal oplossingen van een vergelijking}
+
+Alle vergelijkingen die we tot nu toe oplosten hebben juist 1 oplossing. We noemen ze {\bf echte vergelijkingen}. Er bestaan ook andere vergelijkingen.
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 3x + 18 + 6x &= 9x + 12\\
+\LRA && 3x + 6x - 9x &= 12 - 18\\
+\LRA && 0x	&= - 6
+\end{alignat*}
+\end{voorbeeld}
+
+Deze vergelijking heeft geen oplossing, want je kan voor $x$ geen enkel getal invullen opdat $0$ keer dit getal gelijk zou zijn aan $-6$. Dit is een {\bf valse vergelijking}.
+
+\begin{voorbeeld}
+\begin{alignat*}{2}
+     && 8x - 6	&= 2(3x - 3) + 2x\\
+\LRA && 8x - 6	&= 6x - 6 + 2x\\
+\LRA && 8x - 6x - 2x	&= - 6 + 6\\
+\LRA && 0x	&= 0
+\end{alignat*}
+\end{voorbeeld}
+
+Voor $x$ kan je alle getallen invullen. Als je een willekeurig getal vermenigvuldigt met 0, bekom je altijd 0. 0 is het opslorpend element voor de vermenigvuldiging. Deze vergelijking heeft oneindig veel oplossingen. We noemen dit een {\bf identieke vergelijking}.
+
+\begin{onthoud}
+\begin{itemize}
+  \item Een {\bf echte} vergelijking heeft juist één oplossing.
+  \item Een {\bf valse} vergelijking heeft geen enkele oplossing.
+  \item Een {\bf identieke} vergelijking heeft oneindig veel oplossingen.
+\end{itemize}
+\end{onthoud}
+
+\begin{exercise}
+Los volgende vergelijkingen op en vermeld of ze echt, vals of identiek zijn.
+\begin{enumerate}[(a)]
+  \item $3x + 7 = 5x - 3 - 2x$
+  \item $\dfrac{1}{7}(5x+9) = x - 1$
+  \item $\dfrac{1}{2}(x-30)=2(\dfrac{x}{3}-5)-\dfrac{1}{3}(\dfrac{x}{2}+15)$
+\end{enumerate}
+\end{exercise}
+
+\begin{solution}
+\vspace{-2\topsep}
+\begin{enumerate}[(a)]
+\item $\begin{aligned}[t]
+     && 3x + 7 &= 5x - 3 - 2x\\
+\LRA && 3x - 5x + 2x	&= - 3 - 7\\
+\LRA && 0x	&= - 10 \\
+\end{aligned}$\\
+Valse vergelijking.
+\item $\begin{aligned}[t]
+     && \dfrac{1}{7}(5x+9) &= x - 1\\
+\LRA && \dfrac{5}{7}x+\dfrac{9}{7} &= \dfrac{7}{7}x-\dfrac{7}{7}\\
+\LRA && 5x + 9	&= 7x - 7\\
+\LRA && 5x - 7x	&= - 7 - 9\\
+\LRA && - 2x	&= - 16\\
+\LRA && x	&= \dfrac{-16}{-2}\\
+\LRA && x	= 8\\
+\end{aligned}$\\
+Echte vergelijking.
+\item $\begin{aligned}[t]
+     && \dfrac{1}{2}(x-30)&=2(\dfrac{x}{3}-5)-\dfrac{1}{3}(\dfrac{x}{2}+15)\\
+\LRA && \dfrac{x}{2}-\dfrac{30}{2}&=\dfrac{2x}{3}-10-\dfrac{x}{6}+\dfrac{15}{3}\\
+\LRA && \dfrac{3x}{6}-\dfrac{90}{3}&=\dfrac{4x}{6}-\dfrac{60}{6}-\dfrac{x}{6}+\dfrac{30}{6}\\
+\LRA && 3x - 90	&= 4x - 60 - x - 30\\
+\LRA && 3x - 4x + x	&= - 60 - 30 + 90\\
+\LRA && 0x	&= 0\\
+\end{aligned}$\\
+Identieke vergelijking.
+\end{enumerate}
+\end{solution}
+
+\newpage
+\section*{Oplossingen A.C.O.}
+
+\immediate\closeout\solutionstream
+\input{\jobname.sol}
+
+\end{document}
