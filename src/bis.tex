@@ -1,0 +1,236 @@
+\textwidth 16cm \textheight 23cm \evensidemargin 0cm
+\oddsidemargin 0cm \topmargin -2cm
+\parindent 0pt
+\parskip \medskipamount
+
+\usepackage[utf8]{inputenc}
+\usepackage[dutch]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{minibox}
+\usepackage{ifthen}
+\usepackage{dot2texi}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cancel}
+%\usepackage{fix-cm}
+\usepackage{setspace}
+\usepackage{mdframed}
+\usepackage{mathtools}
+%\usepackage{lipsum}
+
+\usepackage{exsol}
+\renewcommand{\exercisename}{}
+\renewcommand{\solutionname}{}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\usepackage{color}
+\newcommand{\todo}[1]{\textcolor{red}{\##1\#}}
+\newcommand{\question}[1]{\textcolor{blue}{\##1\#}}
+
+\newcommand{\vraag}[2]{\begin{itemize}\item {\it #1} \vspace*{#2}\end{itemize}}
+
+\newcommand{\degree}{\ensuremath{^\circ}}
+\def\LRA{\Leftrightarrow\mkern40mu}
+
+\newcommand\ggd{\qopname\relax o{\mathrm{ggd}}}
+\newcommand\kgv{\qopname\relax o{\mathrm{kgv}}}
+
+\newcounter{menucount}\newcounter{curitem}% Counters
+\newcommand{\menuitem}{\texttt}% Menu item formatting
+\newcommand{\menusep}{\ensuremath{\rightarrow}}% Menu separator
+\newcommand{\menuend}{\relax}% Menu end
+\newcommand{\menulist}[1]{% \menulist{<menu list>}
+  \setcounter{menucount}{0}\setcounter{curitem}{0}% Reset menucount & curitem
+  \renewcommand*{\do}[1]{\stepcounter{menucount}}%
+  \menulistparser{#1}% Count menu items
+  \renewcommand*{\do}[1]{\menuitem{##1}\stepcounter{curitem}\ifnumless{\value{curitem}}{\value{menucount}}{\menusep}{\menuend}}%
+  \menulistparser{#1}% Process list
+}
+\DeclareListParser{\menulistparser}{:}% List separator is ':'
+
+%\graphicspath{{../figuren/}}
+
+\newcommand{\dotrule}[1]{%
+   \parbox[t]{#1}{\vspace*{3pt}\dotfill}}
+   
+\newcommand{\dotFill}{\vspace*{6pt}\dotfill}
+
+\newcommand{\dotlines}[1]{   
+\foreach \n in {1,...,#1}{
+
+\vspace*{0.1cm}
+\dotfill
+\vspace*{0.1cm}
+}}
+
+\newcommand{\ruitjes}[1]{
+
+\hskip-2.6cm
+\begin{tikzpicture}[scale=1.075,x=1.0cm,y=1.0cm]
+\draw [help lines, solid, gray, very thin, step=0.5cm] (0,-#1+0.1cm) grid (21.6,-0.1);
+\end{tikzpicture}
+\vspace*{-1cm}
+}
+
+\newcommand{\ruitjesxy}[2]{
+\begin{tikzpicture}[scale=1.01,line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,dash pattern=on 1pt off 1pt, xstep=0.4.5cm, ystep=0.4.5cm] (0,-#2) grid (#1,0);
+\end{tikzpicture}
+}
+
+\newcommand{\zrmbox}{\framebox{\phantom{EXE}}\phantom{X}}
+\newcommand{\zrm}[1]{\framebox{#1}}
+
+% arule* answerrules
+\def\arulefill{\xrfill[-0.5ex]{0.1pt}[lightgray]}
+\newcommand{\arules}[1]{
+\color{lightgray}
+\vspace*{0.10cm}
+\foreach \n in {1,...,#1}{
+  \vspace*{0.70cm}
+  \hrule height 0.1pt\hfill
+}\color{black}}
+\newcommand{\arule}[1]{
+\color{lightgray}{\raisebox{-0.1cm}{\rule[-0.05cm]{#1}{0.1pt}}}\color{black}
+}
+
+% environment oefening:
+% houdt een teller bij die de oefeningen nummert
+% probeert ook de oefening op één pagina te houden
+\newcounter{noefening}
+\setcounter{noefening}{0}
+\newenvironment{oefening}
+{
+  \stepcounter{noefening}
+  \begin{minipage}{\textwidth}
+  \vspace*{8pt}{\large\bf Oefening \arabic{noefening}}
+}{%
+  \end{minipage}
+}
+
+% environment voorbeeld:
+% houdt een teller bij die de voorbeelden nummert
+% nummering herbegint bij elke subsectie
+% probeert het voorbeeld op één pagina te houden
+\newcounter{nvb}[subsection]
+%\@addtoreset{nvb}{subsubsection}
+\setcounter{nvb}{0}
+\newenvironment{voorbeeld}
+{
+  \stepcounter{nvb}
+  \begin{minipage}{\textwidth}
+  \vspace*{4pt}
+  \textit{Voorbeeld \arabic{nvb}}\\[5pt]
+}{%
+  \end{minipage}
+}
+
+% environment voorbeeld*:
+% probeert het voorbeeld op één pagina te houden
+\newenvironment{voorbeeld*}
+{
+  \begin{minipage}{\textwidth}
+  \vspace*{4pt}
+  \textit{Voorbeeld}
+}{%
+  \end{minipage}
+}
+
+\newenvironment{onthoud}
+{
+\begin{mdframed}[nobreak=true,frametitle={Te onthouden}]
+}{%
+\end{mdframed}
+}
+
+\newcommand{\vglproef}[2]{LL= #1\;${=\joinrel=}$\; RL= #2}
+
+\newcommand{\getallenas}[3][1]{
+\definecolor{cqcqcq}{rgb}{0.65,0.65,0.65}
+\begin{tikzpicture}[scale=#1,line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,dash pattern=on 1pt off 1pt, xstep=1.0cm,ystep=1.0cm] (#2,-0.2) grid (#3,0.2);
+\draw[->,color=black] (#2,0) -- (#3,0);
+\draw[shift={(0,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $0$};
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $1$};
+\draw[color=black] (#3.25,0.07) node [anchor=south west] {$\mathbb{R}$};
+\end{tikzpicture}
+}
+
+\newcommand{\opdracht}{{\bf Opdracht }}
+
+% geef tabular iets meer ruimte
+\setlength{\tabcolsep}{15pt}
+\renewcommand{\arraystretch}{1.5}
+
+% geef align iets meer ruimte:
+\addtolength{\jot}{0.5em}
+
+\newtheorem{definition}{Definitie}
+\newtheorem{eigenschap}{Eigenschap}
+
+\newcommand{\visgraad}[1]{\begin{tabular}{p{0.5cm}|p{#1}}&\\\hline\\\end{tabular}}
+
+\newcommand{\assenstelsel}[5][1]{
+\definecolor{cqcqcq}{rgb}{0.65,0.65,0.65}
+\begin{tikzpicture}[scale=#1,line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\draw [color=cqcqcq,dash pattern=on 1pt off 1pt, xstep=1.0cm,ystep=1.0cm] (#2,#4) grid (#3,#5);
+\draw[->,color=black] (#2,0) -- (#3,0);
+\draw[shift={(1,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $1$};
+\draw[color=black] (#3.25,0.07) node [anchor=south west] { x};
+\draw[->,color=black] (0,#4) -- (0,#5);
+\draw[shift={(0,1)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $1$};
+\draw[color=black] (0.09,#5.25) node [anchor=west] { y};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\end{tikzpicture}
+}
+
+\newcommand{\ConfigureExSol}{
+\renewcommand{\exercisename}{A.C.O.}
+\renewcommand{\solutionname}{A.C.O.}
+\newcounter{exercise2}[section]
+\setcounter{exercise2}{0}
+\renewcommand{\theexercise}{%
+    \arabic{exercise2}%
+}
+\renewenvironment{exsol@exercise}[0]
+{%
+\refstepcounter{exercise2}
+  \begin{minipage}[t]{\textwidth}%
+    \ifthenelse{\boolean{exsol@exerciseaslist}}
+               {\begin{list}%
+                   {%
+                   }%
+                   {%
+                     \setlength{\topsep}{0pt}%
+                     \setlength{\leftmargin}{1em}%
+                     \setlength{\rightmargin}{1em}%
+                     \setlength{\listparindent}{0em}%
+                     \setlength{\itemindent}{0em}%
+                     \setlength{\parsep}{\parskip}}%
+                 \item[\hspace*{\leftmargin}\textit{\exercisename{}
+                                                    \theexercise:}]
+               }%
+               {
+                 \textbf{\exercisename{} \theexercise:}~
+               }
+}
+{%
+  \ifthenelse{\boolean{exsol@exerciseaslist}}
+             {\end{list}}{}
+  \end{minipage}
+  \vspace{1ex}\par
+}
+}
+
+\onehalfspacing
+%singlespacing
+%doublespacing
+
