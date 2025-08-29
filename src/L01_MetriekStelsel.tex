@@ -1,0 +1,574 @@
+% Basiscursus Wiskunde - Lespakket 1
+% Les 1. Metriek stelsel - Vlakken en figuren
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[dutch]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+% Lijsten
+\setlist{itemsep=0.5em, topsep=0.5em, parsep=0pt, partopsep=0pt}
+\AtBeginEnvironment{multicols}{%
+  \setlist[enumerate]{%
+    before=\vspace*{-3.6em},
+    after=\vspace*{-0.5em}
+  }%
+}
+\setlist[enumerate,1]{label=(\alph*)}
+
+% siunitx: decimale komma en nette groepering
+\sisetup{
+  locale = DE,
+  detect-weight = true,
+  detect-family = true,
+  group-separator = {\,},
+  group-minimum-digits = 4
+}
+
+\DeclareSIUnit{\carat}{karaat}
+\DeclareSIUnit{\are}{are}
+\DeclareSIUnit{\litre}{l}
+
+\title{Basiscursus Wiskunde\\\large Les 1. Metriek stelsel -- Vlakken en figuren}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle
+
+\section{De lengtematen}
+
+\subsection{Even terug in de tijd}
+Oorspronkelijk werden de meeste lengtematen ontleend aan de afmetingen van het menselijk lichaam. Je hoorde wellicht reeds van de oude lengtematen \emph{voet}, \emph{el} (van elleboog) en \emph{duim}. De Engelse maat \emph{yard} was bepaald als de afstand van de neuspunt van koning Henry~I tot de top van de duim van zijn uitgestrekte arm. Je kan je wel voorstellen dat deze maten niet nauwkeurig waren en allerminst bruikbaar in de handel.
+
+Om dit probleem op te lossen werd, rond 1790, het metriek stelsel ingevoerd. Als lengte-eenheid werd het veertig miljoenste deel van de omtrek van de aarde genomen en dit werd de \emph{meter} genoemd. In het \emph{Bureau International des Poids et Mesures} te Sèvres wordt een staaf van platina-iridium als standaardmaat bewaard.
+
+\subsection{Overzicht van de lengtematen}
+Alle onderdelen en veelvouden van de meter worden opgebouwd volgens het tientallig stelsel, d.w.z.\ dat elke lengtemaat steeds het tienvoud is van de volgende.
+
+\paragraph{Omzettingstabel LENGTEMATEN}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{7}{c}}
+  \multicolumn{3}{c}{\textbf{Veelvouden}} & \textbf{Eenheid} & \multicolumn{3}{c}{\textbf{Onderdelen}}\\
+  \midrule
+\SI{1}{\kilo\metre} & \SI{1}{\hecto\metre} & \SI{1}{\deca\metre} &  & \SI{1}{\deci\metre} & \SI{1}{\centi\metre} & \SI{1}{\milli\metre}\\
+= & = & = & \textbf{\SI{1}{\metre}} & = & = & =\\
+\SI{1000}{\metre} & \SI{100}{\metre} & \SI{10}{\metre} & & \SI{0.1}{\metre} & \SI{0.01}{\metre} & \SI{0.001}{\metre}
+\end{tabular}%
+\end{center}
+
+Verder onderscheiden we nog:
+\begin{itemize}
+\item als veelvoud:
+  \begin{itemize}
+  \item \SI{1}{\mega\metre} $= \SI{1e6}{\metre}$.
+  \item \emph{lichtjaar} $\approx \SI{9.5e15}{\metre}$; dit wordt gebruikt om afstanden tussen sterren te berekenen.
+  \end{itemize}
+\item als onderdeel:
+  \begin{itemize}
+  \item \SI{1}{\micro\metre} $= \SI{1e-6}{\metre} = \SI{0.001}{\milli\metre}$.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Herleiden}
+Lengtematen herleiden betekent dat we moeten nagaan hoeveel eenheden van de ene eenheid in de andere vervat zijn.
+
+\subsection*{Bij omzetting naar een kleinere lengte-eenheid:}
+
+\subsubsection*{Voorbeeld 1}
+van \si{\deci\metre} $\to$ \si{\centi\metre}: \quad \SI{1}{\deci\metre} = \SI{10}{\centi\metre}\\[0.4em]
+van \si{\hecto\metre} $\to$ \si{\deci\metre}: \quad \SI{1}{\hecto\metre} = \SI{10}{\deca\metre} = \SI{100}{\metre} = \SI{1000}{\deci\metre}
+
+Praktisch: van \si{\hecto\metre} naar \si{\deci\metre} is 3 rangen. Je verschuift de komma 3 rangen naar rechts of plaatst 3 nullen bij. Dus \SI{1}{\hecto\metre} = \SI{1000}{\deci\metre}.
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{18}{\hecto\metre}=\ldots\,\si{\centi\metre}\)
+
+\[
+  \si{\hecto\metre}\xrightarrow[1]{}\si{\deca\metre}\xrightarrow[2]{}\si{\metre}\xrightarrow[3]{}\si{\deci\metre}\xrightarrow[4]{}\si{\centi\metre}
+\]
+4 rangen naar rechts: 4 nullen bijplaatsen. Dus \(\SI{18}{\hecto\metre}=\SI{180000}{\centi\metre}\).
+
+\subsection*{Bij omzetting naar een grotere eenheid verplaatsen we de komma naar links.}
+
+\subsubsection*{Voorbeeld 1}
+\(\SI{4500}{\metre}=\ldots\,\si{\kilo\metre}\)
+\[
+\si{\kilo\metre}\xleftarrow[3]{}\si{\hecto\metre}\xleftarrow[2]{}\si{\deca\metre}\xleftarrow[1]{}\si{\metre}
+\]
+3 rangen naar links: komma 3 plaatsen naar links. Dus \(\SI{4500}{\metre}=\SI{4.5}{\kilo\metre}\).
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{0.2}{\deci\metre}=\ldots\,\si{\deca\metre}\)
+\[
+\si{\deca\metre}\xleftarrow[2]{}\si{\metre}\xleftarrow[1]{}\si{\deci\metre}
+\]
+2 rangen naar links: komma 2 plaatsen naar links. Dus \(\SI{0.2}{\deci\metre}=\SI{0.002}{\deca\metre}\).
+
+\subsection*{A.C.O.~1}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{27.5}{\deci\metre}=\ldots\,\si{\milli\metre}\)
+  \item \(\SI{5}{\hecto\metre}=\ldots\,\si{\deci\metre}\)
+  \item \(\SI{5.66}{\metre}=\ldots\,\si{\milli\metre}\)
+  \item \(\SI{0.02}{\metre}=\ldots\,\si{\centi\metre}\)
+  \item \(\SI{126}{\deci\metre}=\ldots\,\si{\kilo\metre}\)
+  \item \(\SI{5.3}{\centi\metre}=\ldots\,\si{\metre}\)
+  \item \(\SI{3}{\centi\metre}=\ldots\,\si{\deca\metre}\)
+  \item \(\SI{0.04}{\deca\metre}=\ldots\,\si{\hecto\metre}\)
+\end{enumerate}
+\end{multicols}
+
+
+\subsection{Als er verschillende eenheden in de opgave staan}
+Herleid alle getallen naar dezelfde eenheid.
+
+\paragraph{Voorbeeld} \(\SI{1}{\metre}=\SI{7}{\deci\metre}+\ldots\,\si{\centi\metre}\). We herleiden naar \si{\centi\metre}: \(\SI{100}{\centi\metre}=\SI{70}{\centi\metre}+\SI{30}{\centi\metre}\).
+
+\subsection*{A.C.O.~2}
+\begin{enumerate}
+  \item \(\SI{1}{\kilo\metre}-\SI{1}{\metre}=\ldots\,\si{\metre}\)
+  \item \(\SI{4}{\centi\metre}+\ldots=\SI{1}{\deci\metre}\)
+  \item \(\SI{35}{\centi\metre}+\ldots=\SI{4}{\deci\metre}\)
+  \item \(\SI{4}{\metre}-\SI{7}{\deci\metre}=\ldots\,\si{\centi\metre}\)
+\end{enumerate}
+
+\section{De massa}
+We gebruiken het begrip ``massa'' in plaats van ``gewicht''. Volgens de principes van de fysica is massa een juister begrip.
+
+\subsection{Overzicht van de massa's}
+De hoofdeenheid van massa is de gram. Ook de massa's worden uitgedrukt in een tientallig stelsel.
+
+\paragraph{Omzettingstabel MASSA}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{7}{c}}
+  \multicolumn{3}{c}{\textbf{Veelvouden}} & \textbf{Eenheid} & \multicolumn{3}{c}{\textbf{Onderdelen}}\\
+  \midrule
+\SI{1}{\kilo\gram} & \SI{1}{\hecto\gram} & \SI{1}{\deca\gram} &  & \SI{1}{\deci\gram} & \SI{1}{\centi\gram} & \SI{1}{\milli\gram}\\
+= & = & = & \textbf{\SI{1}{\gram}} & = & = & =\\
+\SI{1000}{\gram} & \SI{100}{\gram} & \SI{10}{\gram} & & \SI{0.1}{\gram} & \SI{0.01}{\gram} & \SI{0.001}{\gram}
+\end{tabular}%
+\end{center}
+
+\noindent\(\SI{1}{\kilo\gram}\) is de massa van \(\SI{1}{\litre}\) zuiver water bij \(\SI{4}{\celsius}\). Verdere eenheden:
+\begin{itemize}
+  \item \(\SI{1}{\tonne}=\SI{1000}{\kilo\gram}\)
+  \item \(\SI{1}{\carat}=\SI{2}{\deci\gram}\): de massa van diamant wordt uitgedrukt in karaat.
+\end{itemize}
+
+\subsection{Herleiden}
+De herleiding van massa's gebeurt op dezelfde wijze als bij de lengtematen.
+
+\subsubsection*{Voorbeeld 1}
+\(\SI{0.05}{\kilo\gram}=\ldots\,\si{\deci\gram}\)
+\[
+\si{\kilo\gram}\xrightarrow[1]{}\si{\hecto\gram}\xrightarrow[2]{}\si{\deca\gram}\xrightarrow[3]{}\si{\gram}\xrightarrow[4]{}\si{\deci\gram}
+\]
+4 rangen naar rechts: komma 2 rangen opschuiven, 2 nullen bijplaatsen. Dus \(\SI{0.05}{\kilo\gram}=\SI{5}{\deca\gram}=\SI{500}{\deci\gram}\).
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{2120}{\centi\gram}=\ldots\,\si{\deca\gram}\)
+\[
+\si{\deca\gram}\xleftarrow[3]{}\si{\gram}\xleftarrow[2]{}\si{\deci\gram}\xleftarrow[1]{}\si{\centi\gram}
+\]
+3 rangen naar links: komma 3 plaatsen naar links. Dus \(\SI{2120}{\centi\gram}=\SI{2.12}{\deca\gram}\).
+
+\subsection*{A.C.O.~3}
+\begin{multicols}{2}
+  \begin{enumerate}
+  \item \(\SI{17.5}{\kilo\gram}=\ldots\,\si{\deca\gram}\)
+  \item \(\SI{0.204}{\hecto\gram}=\ldots\,\si{\deci\gram}\)
+  \item \(\SI{50}{\deca\gram}=\ldots\,\si{\centi\gram}\)
+  \item \(\SI{3.2}{\tonne}=\ldots\,\si{\hecto\gram}\)
+  \item \(\SI{12.5}{\deca\gram}=\ldots\,\si{\kilo\gram}\)
+  \item \(\SI{0.02}{\centi\gram}=\ldots\,\si{\hecto\gram}\)
+  \item \(\SI{32150}{\milli\gram}=\ldots\,\si{\gram}\)
+  \item \(\SI{200.5}{\deci\gram}=\ldots\,\si{\deca\gram}\)
+  \end{enumerate}
+\end{multicols}
+
+\(\tfrac{1}{2}\,\si{\kilo\gram}=\ ?\)\\
+\begin{tabular}{@{}ll@{}}
+  A & \(\SI{200}{\gram}\) \\
+  B & \(\SI{50}{\gram}\) \\
+  C & \(\SI{0.20}{\gram}\) \\
+  D & \(\SI{500}{\gram}\) \\
+\end{tabular}
+
+\medskip
+\noindent Bij soortgelijke multiplechoice-oefeningen omcirkel je het juiste antwoord. Dit soort vragen wordt dikwijls gesteld op examens.
+
+\section{Vlaktematen -- Landmaten}
+Vlaktematen of oppervlaktematen worden gebruikt om de oppervlakte van een figuur uit te drukken.
+
+\subsection{Overzicht van de vlaktematen}
+De hoofdeenheid van de vlaktematen is de vierkante meter (\si{\square\metre}). Dit is de oppervlakte van een vierkant met zijde \(\SI{1}{\metre}\). Onderstaande tabel geeft een overzicht van de vlaktematen. Elke vlaktemaat is steeds het honderdvoud van de volgende in de tabel.
+
+\paragraph{Omzettingstabel VLAKTEMATEN}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{7}{c}}
+  \multicolumn{3}{c}{\textbf{Veelvouden}} & \textbf{Eenheid} & \multicolumn{3}{c}{\textbf{Onderdelen}}\\
+  \midrule
+\SI{1}{\square\kilo\metre} & \SI{1}{\square\hecto\metre} & \SI{1}{\square\deca\metre} &  & \SI{1}{\square\deci\metre} & \SI{1}{\square\centi\metre} & \SI{1}{\square\milli\metre}\\
+= & = & = & \textbf{\SI{1}{\square\metre}} & = & = & =\\
+\SI{1000000}{\square\metre} & \SI{10000}{\square\metre} & \SI{100}{\square\metre} & & \SI{0.01}{\square\metre} & \SI{0.0001}{\square\metre} & \SI{0.000001}{\square\metre}
+\end{tabular}%
+\end{center}
+
+\subsection{Herleiden}
+\begin{itemize}
+  \item Bij omzettingen naar de eerstvolgende kleinere oppervlakte-eenheid, verschuift de komma 2 rangen naar rechts.
+  \item Bij omzettingen naar de eerstvolgende grotere oppervlakte-eenheid, verschuift de komma 2 rangen naar links.
+\end{itemize}
+
+\subsubsection*{Voorbeeld 1} \(\SI{5}{\square\deca\metre}=\SI{500}{\square\metre}\) (2 rangen naar rechts of 2 nullen bijplaatsen).
+
+\subsubsection*{Voorbeeld 2} \(\SI{36000}{\square\centi\metre}=\ldots\,\si{\square\metre}\)
+\[
+\si{\square\metre} \xleftarrow[2]{}\si{\square\deci\metre} \xleftarrow[1]{}\si{\square\centi\metre}
+\]
+2 plaatsen naar links \(=2\times2\) rangen naar links. Dus \(\SI{36000}{\square\centi\metre}=\SI{3.6}{\square\metre}\).
+
+\subsubsection*{Voorbeeld 3} \(\SI{0.04}{\square\hecto\metre}=\ldots\,\si{\square\deci\metre}\)
+\[
+\si{\square\hecto\metre} \xrightarrow[1]{}\si{\square\deca\metre} \xrightarrow[2]{}\si{\square\metre} \xrightarrow[3]{}\si{\square\deci\metre}
+\]
+3 plaatsen naar rechts \(=3\times2\) rangen \(=6\) rangen naar rechts. Dus \(\SI{0.04}{\square\hecto\metre}=\SI{40000}{\square\deci\metre}\).
+
+\subsection*{A.C.O.~4}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{3}{\square\centi\metre}=\ldots\,\si{\square\metre}\)
+  \item \(\SI{826}{\square\deci\metre}=\ldots\,\si{\square\metre}\)
+  \item \(\SI{140000}{\square\metre}=\ldots\,\si{\square\kilo\metre}\)
+  \item \(\SI{26.15}{\square\deca\metre}=\ldots\,\si{\square\kilo\metre}\)
+  \item \(\SI{5}{\square\deca\metre}=\ldots\,\si{\square\centi\metre}\)
+  \item \(\SI{0.26}{\square\kilo\metre}=\ldots\,\si{\square\deci\metre}\)
+  \item \(\SI{83}{\square\kilo\metre}=\ldots\,\si{\square\metre}\)
+  \item \(\SI{0.003}{\square\hecto\metre}=\ldots\,\si{\square\deci\metre}\)
+\end{enumerate}
+\end{multicols}
+
+Men legt een vloer van \(\SI{26}{\square\metre}\) met tegels van \(\SI{10}{\centi\metre}\times\SI{20}{\centi\metre}\). Hoeveel tegels zijn er nodig?\\
+\begin{tabular}{@{}ll@{}}
+A & \num{13000} \\
+B & \num{5200} \\
+C & \num{1300} \\
+D & \num{130} \\
+\end{tabular}
+
+\subsection{Landmaten}
+De oppervlakte van akkers, weiden of bossen kan ook uitgedrukt worden in landmaten. De hoofdeenheid van de landmaat is de \emph{are} (\si{\are}). De are is de oppervlakte van \(\SI{1}{\square\deca\metre}=\SI{100}{\square\metre}\).
+
+\paragraph{Omzettingstabel LANDMATEN}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{3}{c}}
+  \textbf{Veelvouden} & \textbf{Eenheid} & \textbf{Onderdelen} \\
+  \midrule
+  \(\SI{1}{\hectare}\)                &                  & \(\SI{1}{\centi\are}\)                \\
+  =                   &                  & =                   \\
+  \(\SI{100}{\are}\)               & \textbf{\(\SI{1}{\are}\)}     & \(\SI{0.01}{\are}\)              \\
+  =                   &                  & =                   \\
+  \(\SI{1}{\square\hecto\metre}\)            & \(\si{\square\deca\metre}\)          & \(\si{\square\metre}\)
+\end{tabular}
+\end{center}
+
+\subsection{Herleidingen vlaktematen -- landmaten}
+
+\subsection*{Tussen landmaten onderling}
+
+Zelfde principe als bij de vlaktematen.
+
+\subsubsection*{Voorbeeld}
+\(\SI{0.40}{\hectare}=\ldots\,\si{\centi\are}\).
+\[
+\si{\hectare} \xrightarrow[1]{} \si{\are} \xrightarrow[2]{} \si{\centi\are}
+\]
+2 plaatsen naar rechts \(=2\times2\) rangen \(=4\) rangen. Dus \(\SI{0.40}{\hectare}=\SI{4000}{\centi\are}\).
+
+\subsection*{Van landmaat naar vlaktemaat of omgekeerd}
+We herleiden de opgave steeds tot de overeenstemmende vlaktemaat.
+
+\subsubsection*{Voorbeeld 1}
+\(\SI{0.25}{\square\hecto\metre}=\ldots\,\si{\centi\are}\)\\
+\(\si{\centi\are} = \si{\square\metre}\) (de overeenstemmende vlaktemaat). \(\SI{0.25}{\square\hecto\metre}=\SI{2500}{\square\metre}\) (zie vlaktematen). Dus \(\SI{0.25}{\square\hecto\metre}=\SI{2500}{\centi\are}\).
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{148000}{\are}=\ldots\,\si{\square\kilo\metre}\)\\
+\(\si{\are}=\si{\square\deca\metre}\). Dus \(\SI{148000}{\square\deca\metre}=\SI{14.8}{\square\kilo\metre}\); bijgevolg \(\SI{148000}{\are}=\SI{14.8}{\square\kilo\metre}\).
+
+\subsection*{A.C.O.~5}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{5}{\are}=\ldots\,\si{\centi\are}\)
+  \item \(\SI{120}{\centi\are}=\ldots\,\si{\hectare}\)
+  \item \(\SI{0.07}{\are}=\ldots\,\si{\hectare}\)
+  \item \(\SI{0.8}{\hectare}=\ldots\,\si{\are}\)
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[start=5]
+  \item \(\SI{7}{\are}=\ldots\,\si{\square\metre}\)
+  \item \(\SI{2.15}{\hectare}=\ldots\,\si{\square\metre}\)
+  \item \(\SI{2810}{\square\metre}=\ldots\,\si{\are}\)
+  \item \(\SI{1.13}{\square\kilo\metre}=\ldots\,\si{\hectare}\)
+\end{enumerate}
+\end{multicols}
+
+Welke oppervlakte is niet gelijk aan de andere?\\
+\begin{tabular}{@{}ll@{}}
+A & \(\SI{12}{\are}\,\SI{3}{\centi\are}\) \\
+B & \(\SI{1203}{\square\metre}\) \\
+C & \(\SI{0.123}{\hectare}\) \\
+D & \(\SI{12.03}{\are}\) \\
+\end{tabular}
+
+\section{Inhoudsmaten -- Ruimtematen}
+Inhoudsmaten en ruimtematen worden gebruikt om aan te duiden welk deel van de ruimte door een lichaam wordt ingenomen. Een boek, een boterdoosje, een fles wijn, \dots{} zijn voorbeelden van lichamen. Voorbeelden van meetkundige lichamen zijn: kubus, balk, cilinder, \dots{} Deze worden in les~3 verder besproken.
+
+\subsection{Overzicht van de inhoudsmaten}
+De hoofdeenheid van de inhoudsmaten is de liter. De liter is de inhoud van een kubus met zijde \(\SI{1}{\deci\metre}\) (1 kubieke decimeter). Onderstaande tabel geeft een overzicht van de inhoudsmaten. Bij twee opeenvolgende inhoudsmaten is de ene tienmaal groter dan de andere.
+
+\paragraph{Omzettingstabel INHOUDSMATEN}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{7}{c}}
+  \multicolumn{3}{c}{\textbf{Veelvouden}} & \textbf{Eenheid} & \multicolumn{3}{c}{\textbf{Onderdelen}}\\
+  \midrule
+\si{\kilo\litre} & \si{\hecto\litre} & \si{\deca\litre} &  & \si{\deci\litre} & \si{\centi\litre} & \si{\milli\litre}\\
+= & = & = & \textbf{\SI{1}{\litre}} & = & = & =\\
+\SI{1000}{\litre} & \SI{100}{\litre} & \SI{10}{\litre} & & \SI{0.1}{\litre} & \SI{0.01}{\litre} & \SI{0.001}{\litre}
+\end{tabular}
+\end{center}
+
+De benaming \emph{kiloliter} wordt zelden gebruikt. In dit geval schrijft men \(\SI{10}{\hecto\litre}\).
+
+\subsection{Herleiden}
+Dit gebeurt op dezelfde wijze als bij de lengtematen.
+
+\subsubsection*{Voorbeeld 1}
+\(\SI{15.3}{\deci\litre}=\ldots\,\si{\hecto\litre}\)\\
+\[
+\si{\hecto\litre} \xleftarrow[3]{}\si{\deca\litre} \xleftarrow[2]{}\si{\litre} \xleftarrow[1]{}\si{\deci\litre}
+\]
+3 rangen naar links: \(\SI{15.3}{\deci\litre}=\SI{0.0153}{\hecto\litre}\).
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{56.14}{\deca\litre}=\ldots\,\si{\centi\litre}\)\\
+\[
+\si{\deca\litre} \xrightarrow[1]{}\si{\litre} \xrightarrow[2]{}\si{\deci\litre} \xrightarrow[3]{}\si{\centi\litre}
+\]
+3 rangen naar rechts: \(\SI{56.14}{\deca\litre}=\SI{56140}{\centi\litre}\).
+
+\subsection*{A.C.O.~6}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{7}{\litre}=\ldots\,\si{\centi\litre}\)
+  \item \(\SI{850}{\deci\litre}=\ldots\,\si{\hecto\litre}\)
+\end{enumerate}
+\columnbreak
+\begin{enumerate}[start=3]
+  \item \(\SI{0.06}{\centi\litre}=\ldots\,\si{\litre}\)
+  \item \(\SI{0.35}{\litre}=\ldots\,\si{\centi\litre}\)
+\end{enumerate}
+\end{multicols}
+
+\noindent\textbf{b)} \SI{1}{\deci\litre} is gelijk aan:\\
+\begin{tabular}{@{}ll@{}}
+A & een honderdste liter \\
+B & een tiende liter \\
+C & honderdmaal een liter \\
+D & tienmaal een liter \\
+\end{tabular}
+
+\medskip
+\noindent\textbf{c)} \(\SI{5}{\litre}+\SI{32}{\deci\litre}+\SI{310}{\milli\litre}=\ ?\)\\
+\begin{tabular}{@{}ll@{}}
+A & \(\SI{5.630}{\litre}\) \\
+B & \(\SI{5.342}{\litre}\) \\
+C & \(\SI{11.30}{\litre}\) \\
+D & \(\SI{8.510}{\litre}\) \\
+\end{tabular}
+
+\subsection{De ruimtematen}
+De hoofdeenheid van de ruimtematen is de kubieke meter (\si{\cubic\metre}). Dit is de ruimte die ingenomen wordt door een kubus met een ribbe van \(\SI{1}{\metre}\). Van twee opeenvolgende ruimtematen is de ene altijd duizendmaal groter dan de andere.
+
+\paragraph{Omzettingstabel RUIMTEMATEN}
+\renewcommand{\arraystretch}{1.2}
+\begin{center}
+\setlength{\fboxsep}{4pt}\setlength{\fboxrule}{0.5pt}%
+\begin{tabular}{*{5}{c}}
+  \textbf{Eenheid} & \multicolumn{3}{c}{\textbf{Onderdelen}}\\
+  \midrule
+& & \SI{1}{\cubic\deci\metre} & \SI{1}{\cubic\centi\metre} & \SI{1}{\cubic\milli\metre}\\
+& \textbf{\SI{1}{\cubic\metre}} & = & = & =\\
+& & \(\SI{0.001}{\cubic\metre}\) & \(\SI{1e-6}{\cubic\metre}\) & \(\SI{1e-9}{\cubic\metre}\)
+\end{tabular}
+\end{center}
+
+Veelvouden van \(\si{\cubic\metre}\) worden in de praktijk uiterst zelden gebruikt.
+
+\subsection{Herleiden van ruimtematen}
+Elke eenheid gaat telkens duizendmaal in de daaropvolgende grotere eenheid. We schuiven de komma dus telkens drie rangen op.
+
+\subsubsection*{Voorbeeld 1}
+\(\SI{550}{\cubic\milli\metre}=\ldots\,\si{\cubic\deci\metre}\).\\
+\[
+\si{\cubic\deci\metre} \xleftarrow[2]{}\si{\cubic\centi\metre} \xleftarrow[1]{}\si{\cubic\milli\metre}
+\]
+2 plaatsen naar links \(=2\times3\) rangen \(=6\) rangen. Dus \(\SI{550}{\cubic\milli\metre}=\SI{0.00055}{\cubic\deci\metre}\).
+
+\subsubsection*{Voorbeeld 2}
+\(\SI{2.3}{\cubic\metre}=\ldots\,\si{\cubic\deci\metre}\).\\
+\[
+\si{\cubic\metre} \xrightarrow[1]{}\si{\cubic\deci\metre}
+\]
+1 plaats naar rechts \(=3\) rangen. Dus \(\SI{2.3}{\cubic\metre}=\SI{2300}{\cubic\deci\metre}\).
+
+\subsection{Verband tussen inhoudsmaten en ruimtematen}
+\[\SI{1}{\litre}=\SI{1}{\cubic\deci\metre}.\]
+
+\subsection*{A.C.O.~7}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{0.75}{\cubic\deci\metre}=\ldots\,\si{\cubic\centi\metre}\)
+  \item \(\SI{0.5}{\cubic\deci\metre}=\ldots\,\si{\cubic\milli\metre}\)
+  \item \(\SI{8000}{\cubic\milli\metre}=\ldots\,\si{\cubic\deci\metre}\)
+  \item \(\num{1000}\times \SI{6}{\cubic\centi\metre}=6\,\ldots\)
+  \item \(\SI{80}{\cubic\deci\metre}+\ldots\,\si{\cubic\metre}=\SI{100}{\cubic\deci\metre}\)
+  \item \(\SI{147}{\milli\litre}=\ldots\,\si{\cubic\milli\metre}\)
+  \item \(\SI{320}{\litre}=\ldots\,\si{\cubic\metre}\)
+  \item \(\SI{6}{\cubic\deci\metre}=\ldots\,\si{\centi\litre}\)
+  \item \(\SI{120}{\cubic\centi\metre}=\ldots\,\si{\litre}\)
+  \item \(\SI{3.4}{\hecto\litre}=\ldots\,\si{\cubic\centi\metre}\)
+\end{enumerate}
+\end{multicols}
+
+\(\SI{1}{\litre}\) zuiver water bij \(\SI{4}{\celsius}\) weegt \(\SI{1}{\kilo\gram}\). Herleid voor zuiver water bij \(\SI{4}{\celsius}\):
+\[
+\begin{array}{rcl}
+\SI{160}{\tonne} & \to & \ldots\,\si{\cubic\metre} \\
+\SI{12.5}{\kilo\gram} & \to & \ldots\,\si{\litre} \\
+\SI{16500}{\gram} & \to & \ldots\,\si{\deci\litre} \\
+\SI{0.006}{\kilo\gram} & \to & \ldots\,\si{\deci\litre}
+\end{array}
+\]
+
+\section*{OPLOSSINGEN A.C.O.}
+\paragraph{1.}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{27.5}{\deci\metre}=\SI{2750}{\milli\metre}\)
+  \item \(\SI{5}{\hecto\metre}=\SI{5000}{\deci\metre}\)
+  \item \(\SI{5.66}{\metre}=\SI{5660}{\milli\metre}\)
+  \item \(\SI{0.02}{\metre}=\SI{2}{\centi\metre}\)
+  \item \(\SI{126}{\deci\metre}=\SI{0.0126}{\kilo\metre}\)
+  \item \(\SI{5.3}{\centi\metre}=\SI{0.053}{\metre}\)
+  \item \(\SI{3}{\centi\metre}=\SI{0.003}{\deca\metre}\)
+  \item \(\SI{0.04}{\deca\metre}=\SI{0.004}{\hecto\metre}\)
+\end{enumerate}
+\end{multicols}
+\paragraph{2.} \(\SI{999}{\metre};\quad \SI{6}{\centi\metre};\quad \SI{5}{\centi\metre};\quad \SI{330}{\centi\metre}.\)
+
+\paragraph{3.}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{17.5}{\kilo\gram}=\SI{1750}{\deca\gram}\)
+  \item \(\SI{0.204}{\hecto\gram}=\SI{204}{\deci\gram}\)
+  \item \(\SI{50}{\deca\gram}=\SI{50000}{\centi\gram}\)
+  \item \(\SI{3.2}{\tonne}=\SI{32000}{\hecto\gram}\)
+  \item \(\SI{12.5}{\deca\gram}=\SI{0.125}{\kilo\gram}\)
+  \item \(\SI{0.02}{\centi\gram}=\SI{0.000002}{\hecto\gram}\)
+  \item \(\SI{32150}{\milli\gram}=\SI{32.15}{\gram}\)
+  \item \(\SI{200.5}{\deci\gram}=\SI{2.005}{\deca\gram}\)
+\end{enumerate}
+\end{multicols}
+\(\tfrac{1}{2}\,\si{\kilo\gram}\), Antwoord D.
+
+\paragraph{4.}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{3}{\square\centi\metre}=\SI{0.0003}{\square\metre}\)
+  \item \(\SI{826}{\square\deci\metre}=\SI{8.26}{\square\metre}\)
+  \item \(\SI{140000}{\square\metre}=\SI{0.14}{\square\kilo\metre}\)
+  \item \(\SI{26.15}{\square\deca\metre}=\SI{0.002615}{\square\kilo\metre}\)
+  \item \(\SI{5}{\square\deca\metre}=\SI{5000000}{\square\centi\metre}\)
+  \item \(\SI{0.26}{\square\kilo\metre}=\SI{26000000}{\square\deci\metre}\)
+  \item \(\SI{83}{\square\kilo\metre}=\SI{83000000}{\square\metre}\)
+  \item \(\SI{0.003}{\square\hecto\metre}=\SI{3000}{\square\deci\metre}\)
+\end{enumerate}
+\end{multicols}
+Antwoord C. (Oppervlakte tegel \(=\SI{200}{\square\centi\metre}\), vloer \(=\SI{26}{\square\metre}=\SI{260000}{\square\centi\metre}\), aantal \(=\num{260000}:\num{200}=\num{1300}\).)
+
+\paragraph{5.}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{5}{\are}=\SI{500}{\centi\are}\)
+  \item \(\SI{120}{\centi\are}=\SI{0.012}{\hectare}\)
+  \item \(\SI{0.07}{\are}=\SI{0.0007}{\hectare}\)
+  \item \(\SI{0.8}{\hectare}=\SI{80}{\are}\)
+  \item \(\SI{7}{\are}=\SI{700}{\square\metre}\)
+  \item \(\SI{2.15}{\hectare}=\SI{21500}{\square\metre}\)
+  \item \(\SI{2810}{\square\metre}=\SI{28.1}{\are}\)
+  \item \(\SI{1.13}{\square\kilo\metre}=\SI{113}{\hectare}\)
+\end{enumerate}
+\end{multicols}
+Antwoord C.
+
+\paragraph{6.}
+\begin{enumerate}
+  \item \(\SI{7}{\litre}=\SI{700}{\centi\litre}\)
+  \item \(\SI{850}{\deci\litre}=\SI{0.85}{\hecto\litre}\)
+  \item \(\SI{0.06}{\centi\litre}=\SI{0.0006}{\litre}\)
+  \item \(\SI{0.35}{\litre}=\SI{35}{\centi\litre}\)
+\end{enumerate}
+Antwoord B.\quad \; Antwoord D.
+
+\paragraph{7.}
+\begin{multicols}{2}
+\begin{enumerate}
+  \item \(\SI{0.75}{\cubic\deci\metre}=\SI{750}{\cubic\centi\metre}\)
+  \item \(\SI{0.5}{\cubic\deci\metre}=\SI{500000}{\cubic\milli\metre}\)
+  \item \(\SI{8000}{\cubic\milli\metre}=\SI{0.008}{\cubic\deci\metre}\)
+  \item \(\num{1000}\times \SI{6}{\cubic\centi\metre}=\SI{6}{\cubic\deci\metre}\)
+  \item \(\SI{80}{\cubic\deci\metre}+\ldots\,\si{\cubic\metre}=\SI{100}{\cubic\deci\metre}\)
+  \item \(\SI{147}{\milli\litre}=\SI{147}{\cubic\centi\metre}\)
+  \item \(\SI{320}{\litre}=\SI{0.32}{\cubic\metre}\)
+  \item \(\SI{6}{\cubic\deci\metre}=\SI{600}{\centi\litre}\)
+  \item \(\SI{120}{\cubic\centi\metre}=\SI{0.12}{\litre}\)
+  \item \(\SI{3.4}{\hecto\litre}=\SI{340000}{\cubic\centi\metre}\)
+\end{enumerate}
+\end{multicols}
+\(\SI{160}{\tonne}\to\SI{160}{\cubic\metre}\), \; \(\SI{12.5}{\kilo\gram}\to\SI{12.5}{\litre}\), \; \(\SI{16500}{\gram}\to\SI{165}{\deci\litre}\), \; \(\SI{0.006}{\kilo\gram}\to\SI{0.06}{\deci\litre}\).
+
+\bigskip
+\section*{Samenvatting}
+\textbf{Herleiden}
+\begin{itemize}
+  \item Bij omzetting naar een kleinere eenheid verschuift de komma naar rechts.
+  \item Bij omzetting naar een grotere eenheid verschuift de komma naar links.
+  \item Bij lengtematen, inhoudsmaten en massa's verschuift de komma 1 rang per opeenvolgende eenheid.
+  \item Bij landmaten en oppervlaktematen verschuift de komma telkens 2 rangen.
+  \item Bij ruimtematen verschuift de komma telkens 3 rangen.
+\end{itemize}
+
+\end{document}
