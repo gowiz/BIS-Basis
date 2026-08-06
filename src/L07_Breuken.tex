@@ -1,33 +1,22 @@
-\documentclass[12pt]{article}
+% Basiscursus Wiskunde
+% Les 7. Breuken
+%
+% Wijzigingen t.o.v. de originele bis-basis:
+% *
+%
+% Openstaande opmerkingen:
+% *
 
-\include{bis}
-
-\usepackage{tikz}
-\usetikzlibrary{calc,arrows}
-\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Volgende wijzigingen werden aangebracht tov de originele bis-basis
-% * 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Volgende opmerkingen heb ik nog
-% * 
-
-\lhead{}
-\rhead{BIS-Basis -- Les 7}
+\documentclass{bis}
 
 \begin{document}
 
-\ConfigureExSol
-
-\setcounter{section}{6}
-\section{Breuken}
+\les{7}{Breuken}
 
 
 \subsection{Begrippen}
 
-$$\dfrac{\tikzmark{a}2}{\tikzmark{c}5}\qquad \begin{matrix}\tikzmark{b}\mbox{teller}\\\tikzmark{d}\mbox{noemer}\end{matrix} $$
+\[\dfrac{\tikzmark{a}2}{\tikzmark{c}5}\qquad \begin{matrix}\tikzmark{b}\text{teller}\\\tikzmark{d}\text{noemer}\end{matrix} \]
 
 \begin{tikzpicture}[overlay,remember picture,out=15,in=165,distance=0.5cm]
 \draw[-stealth,shorten >=3pt,shorten <=10pt] (a.north) to (b.north);
@@ -97,10 +86,10 @@ $\dfrac{3}{2}$\hspace*{1em}\raisebox{-1em}{
 
 Een breuk kunnen we ook beschouwen als een andere schrijfwijze van een deling.
 Als we $5 : 2$ uitrekenen bekomen we het geheel getal $2$ met rest $1$ of een decimaal getal $2.5$. In plaats van met decimalen te rekenen, kunnen we het resultaat ook schrijven in breukvorm.
-$$5 : 2 = \dfrac{5}{2}$$
+\[5 : 2 = \dfrac{5}{2}\]
 
 \begin{voorbeeld}
-$$\dfrac{4}{7}=4:7$$
+\[\dfrac{4}{7}=4:7\]
 \end{voorbeeld}
 
 \subsubsection*{Opmerkingen}
@@ -139,7 +128,7 @@ Bijvoorbeeld $8=\dfrac{8}{1}$ en $20=\dfrac{20}{1}$ of $20=20:1$
 \begin{exercise}
 Druk het gekleurde gedeelte van het vierkant uit als een breuk.
 \begin{multicols}{3}
-  \begin{enumerate}[(a)]
+  \begin{enumerate}
     \item
 \raisebox{-10em}{
 \begin{tikzpicture}[scale=2, line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
@@ -180,7 +169,7 @@ Druk het gekleurde gedeelte van het vierkant uit als een breuk.
 
 \begin{solution}
 \begin{multicols}{3}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{1}{4}$
   \item $\dfrac{3}{4}$
   \item $\dfrac{2}{6}$
@@ -189,28 +178,18 @@ Druk het gekleurde gedeelte van het vierkant uit als een breuk.
 \end{solution}
 
 \begin{exercise}
-Een zak snoepjes wordt verdeeld onder 3 kinder. Evy krijgt 8 snoepjes, Tineke krijgt er 2 minder en Nele krijgt er 3. Druk uit door middel van een breuk hoeveel snoepjes uit de zak elk kind krijgt.
+Een zak snoepjes wordt verdeeld onder 3 kinderen. Evy krijgt 8 snoepjes, Tineke krijgt er 2 minder en Nele krijgt er 3. Druk uit door middel van een breuk hoeveel snoepjes uit de zak elk kind krijgt.
 \end{exercise}
 
 \begin{solution}
 In de zak zitten $8 + 6 + 3 = 17$ snoepjes.
 Het geheel bestaat uit $17$ delen; dus de noemer is $17$.
-Evy krijgt $\dfrac{8}{17}$, Tineke $\dfrac{6}{17}$ en Nele $\dfrac{3}{17}$. 
+Evy krijgt $\dfrac{8}{17}$, Tineke $\dfrac{6}{17}$ en Nele $\dfrac{3}{17}$.
 \end{solution}
 
 \subsection{Hoofdeigenschap van breuken}
 
 We duiden van een rechthoek achtereenvolgens $\dfrac{2}{4}$, $\dfrac{1}{2}$ en $\dfrac{3}{6}$ aan.
-
-\newcommand{\drawbox}[4]
-{
-\draw [line width=1.6pt] (#1,#2) -- (#3,#2) -- (#3,#4) -- (#1,#4) -- cycle;
-}
-\newcommand{\fillbox}[4]
-{
-\draw [line width=1.6pt] (#1,#2) -- (#3,#2) -- (#3,#4) -- (#1,#4) -- cycle;
-\fill [fill opacity=0.23] (#1,#2) -- (#3,#2) -- (#3,#4) -- (#1,#4) -- cycle;
-}
 
 \begin{itemize}
   \item $\dfrac{2}{4}$\hspace*{1em}\raisebox{-1em}{
@@ -221,7 +200,7 @@ We duiden van een rechthoek achtereenvolgens $\dfrac{2}{4}$, $\dfrac{1}{2}$ en $
 \drawbox{3}{0}{4.5}{1}
 \drawbox{4.5}{0}{6}{1}
 \end{tikzpicture}}
-  \item $\dfrac{2}{4}$\hspace*{1em}\raisebox{-1em}{
+  \item $\dfrac{1}{2}$\hspace*{1em}\raisebox{-1em}{
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \clip(0,0) rectangle (6,1);
 \fillbox{0}{0}{3}{1}
@@ -240,10 +219,10 @@ We duiden van een rechthoek achtereenvolgens $\dfrac{2}{4}$, $\dfrac{1}{2}$ en $
 \end{itemize}
 
 Het aangeduide deel is telkens even groot.
-$$\dfrac{2}{4}=\dfrac{1}{2}=\dfrac{3}{6}$$
+\[\dfrac{2}{4}=\dfrac{1}{2}=\dfrac{3}{6}\]
 
 Dit kunnen we algebraïsch afleiden:
-$$\dfrac{2}{4}=\dfrac{2:2}{4:2}=\dfrac{1}{2} \qquad\mbox{ en }\qquad\dfrac{1}{2}=\dfrac{1\cdot 3}{2\cdot 3}=\dfrac{3}{6}\;.$$
+\[\dfrac{2}{4}=\dfrac{2:2}{4:2}=\dfrac{1}{2} \qquad\text{ en }\qquad\dfrac{1}{2}=\dfrac{1\cdot 3}{2\cdot 3}=\dfrac{3}{6}\;.\]
 
 \begin{onthoud}
 De waarde van een breuk verandert niet als we teller en noemer van die breuk vermenigvuldigen met of delen door eenzelfde van nul verschillend getal.
@@ -251,14 +230,14 @@ De waarde van een breuk verandert niet als we teller en noemer van die breuk ver
 
 \begin{exercise}
 Vul de ontbrekende tellers en noemers in, zodat alle breuken gelijk zijn.
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{3}{13}=\dfrac{\arule{0.75cm}}{78}=\dfrac{6}{\arule{0.75cm}}=\dfrac{90}{\arule{0.75cm}}$
   \item $\dfrac{27}{\arule{0.75cm}}=\dfrac{\arule{0.75cm}}{24}=\dfrac{9}{4}=\dfrac{45}{\arule{0.75cm}}$
 \end{enumerate}
 \end{exercise}
 
 \begin{solution}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{3}{13}=\dfrac{18}{78}=\dfrac{6}{26}=\dfrac{90}{390}$
   \item $\dfrac{27}{12}=\dfrac{54}{24}=\dfrac{9}{4}=\dfrac{45}{20}$
 \end{enumerate}
@@ -266,14 +245,14 @@ Vul de ontbrekende tellers en noemers in, zodat alle breuken gelijk zijn.
 
 \begin{exercise}
 Bepaal telkens de waarde van $a$.
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{25}{55}=\dfrac{5}{a}$
   \item $\dfrac{a}{12}=\dfrac{13}{6}$
 \end{enumerate}
 \end{exercise}
 
 \begin{solution}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $a=55:5=11$
   \item $a=13\cdot 2=26$
 \end{enumerate}
@@ -289,13 +268,13 @@ Hiervoor bepalen we de g.g.d. van teller en noemer.
 
 \begin{voorbeeld}
 Herleid tot een onvereenvoudigbare breuk:
-$$\dfrac{24}{102}=\dfrac{?}{?}$$
+\[\dfrac{24}{102}=\dfrac{?}{?}\]
 
 We ontbinden teller en noemer in factoren:
 \begin{center}
 \begin{tabular}{r|lp{2cm}r|l}
 24 & 2 & & 102 & 2\\
-12 & 2 & &  52 & 3\\
+12 & 2 & &  51 & 3\\
 6 & 2  & &  17 & 17\\
 3 & 3  & &   1\\
 1
@@ -303,7 +282,7 @@ We ontbinden teller en noemer in factoren:
 \end{center}
 Ontbonden in factoren hebben we dus $24=2^3\cdot 3$ en $102=2\cdot 3 \cdot 17$\\
 
-Nu bepalen we de grootste gemene deler: $ggd(24,102)=2\cdot 3=6$.\\
+Nu bepalen we de grootste gemene deler: $\ggd(24,102)=2\cdot 3=6$.\\
 
 En dus $\dfrac{24}{102}=\dfrac{24:6}{102:6}=\dfrac{4}{17}$.
 
@@ -316,11 +295,11 @@ Een andere manier om een breuk te herleiden tot een onvereenvoudigbare breuk is:
 \end{itemize}
 
 \begin{voorbeeld}
-$$\dfrac{24}{102}=\dfrac{2\cdot 2\cdot 2\cdot 3}{2\cdot 3 \cdot 17}=\dfrac{\cancel{2}\cdot 2\cdot 2\cdot \cancel{3}}{\cancel{2}\cdot \cancel{3} \cdot 17}=\dfrac{4}{17}$$
+\[\dfrac{24}{102}=\dfrac{2\cdot 2\cdot 2\cdot 3}{2\cdot 3 \cdot 17}=\dfrac{\cancel{2}\cdot 2\cdot 2\cdot \cancel{3}}{\cancel{2}\cdot \cancel{3} \cdot 17}=\dfrac{4}{17}\]
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$\dfrac{275}{495}=\dfrac{?}{?}$$
+\[\dfrac{275}{495}=\dfrac{?}{?}\]
 
 \begin{center}
 \begin{tabular}{r|lp{2cm}r|l}
@@ -334,17 +313,17 @@ $$\dfrac{275}{495}=\dfrac{?}{?}$$
 \end{center}
 
 \paragraph*{Eerste manier:}
-$$\ggd(275, 495)=5  \cdot 11 = 55$$
-$$\Rightarrow \dfrac{275}{495}=\dfrac{275:55}{495:55}=\dfrac{5}{9}$$
+\[\ggd(275, 495)=5  \cdot 11 = 55\]
+\[\Rightarrow \dfrac{275}{495}=\dfrac{275:55}{495:55}=\dfrac{5}{9}\]
 
 \paragraph*{Tweede manier:}
-$$\dfrac{275}{495}=\dfrac{\cancel{5}\cdot 5\cdot \cancel{11}}{3 \cdot 3 \cdot \cancel{5} \cdot \cancel{11}}=\dfrac{5}{9}$$
+\[\dfrac{275}{495}=\dfrac{\cancel{5}\cdot 5\cdot \cancel{11}}{3 \cdot 3 \cdot \cancel{5} \cdot \cancel{11}}=\dfrac{5}{9}\]
 
 \end{voorbeeld}
 
 \begin{exercise}
 Herleid tot een onvereenvoudigbare breuk:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item uit het hoofd:
   %\begin{multicols}{2}
   \begin{itemize}
@@ -370,7 +349,7 @@ Herleid tot een onvereenvoudigbare breuk:
 \end{exercise}
 
 \begin{solution}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item \begin{itemize}
     \item $\dfrac{6}{15}=\dfrac{2}{5}$
     \item $\dfrac{22}{55}=\dfrac{2}{5}$
@@ -428,7 +407,7 @@ Herleid tot een onvereenvoudigbare breuk:
         1 &    & &    17 & 17\\
     \multicolumn{2}{c}{$11067=3\cdot7\cdot17\cdot31$}& &   1 & \\
     \multicolumn{2}{c}{}
-    &&\multicolumn{2}{c}{$15470=\cdot2\cdot5\cdot7\cdot13\cdot17$}
+    &&\multicolumn{2}{c}{$15470=2\cdot5\cdot7\cdot13\cdot17$}
     \end{tabular}
     
     $\Rightarrow \dfrac{11067}{15470}=\dfrac{3\cdot\cancel{7}\cdot \cancel{17}\cdot 31}{2\cdot 5\cdot \cancel{7}\cdot 13\cdot \cancel{17}}=\dfrac{93}{130}$\\
@@ -487,7 +466,7 @@ Controleer eerst of je de gegeven breuk kan vereenvoudigen en maak daarna gelijk
 
 \begin{exercise}
 Maak volgende breuken gelijknamig:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{5}{6}$ en $\dfrac{3}{8}$
   \item $\dfrac{60}{96}$ en $\dfrac{45}{66}$
   \item $\dfrac{4}{6}$ en $\dfrac{6}{8}$ en $\dfrac{3}{9}$
@@ -495,8 +474,8 @@ Maak volgende breuken gelijknamig:
 \end{exercise}
 
 \begin{solution}
-\begin{enumerate}[(a)]
-  \item $\dfrac{5}{6}=\dfrac{20}{24}$ en $\dfrac{5}{6}=\dfrac{20}{24}$
+\begin{enumerate}
+  \item $\dfrac{5}{6}=\dfrac{20}{24}$ en $\dfrac{3}{8}=\dfrac{9}{24}$
   \item vereenvoudig: $\dfrac{60}{96}=\dfrac{5}{8}$ en $\dfrac{45}{66}=\dfrac{15}{22}$\\
   gemeenschappelijke noemer: $88$\\
   gelijknamig maken: $\dfrac{5}{8}=\dfrac{55}{88}$ en $\dfrac{15}{22}=\dfrac{60}{88}$
@@ -513,7 +492,7 @@ d.w.z. rangschikken van breuken van klein naar groot of van groot naar klein.
 \subsubsection{Gelijknamige breuken}
 
 De breuk met de kleinste teller is de kleinste breuk.
-$$\dfrac{2}{7} < \dfrac{5}{7}$$
+\[\dfrac{2}{7} < \dfrac{5}{7}\]
 
 \subsubsection{Breuken met gelijke teller}
 
@@ -540,40 +519,40 @@ Bij breuken met gelijke teller is de breuk met de grootste noemer het kleinst
 \end{tikzpicture}}
 \end{itemize}
 
-$$\dfrac{2}{6} < \dfrac{2}{4}$$
+\[\dfrac{2}{6} < \dfrac{2}{4}\]
 
 \subsubsection{Ongelijknamige breuken}
 
 \begin{voorbeeld}
 Welke breuk is het grootst?
-$$\dfrac{7}{9} \mbox{ of } \dfrac{11}{15}$$
+\[\dfrac{7}{9} \text{ of } \dfrac{11}{15}\]
 Maak de breuken eerst gelijknamig en vergelijk ze dan:\\
 $\dfrac{7}{9}=\dfrac{35}{45}$ en $\dfrac{11}{15}=\dfrac{33}{45}$\\
 $\dfrac{35}{45}>\dfrac{33}{45}$ dus:
-$$\dfrac{7}{9}>\dfrac{11}{15}$$
+\[\dfrac{7}{9}>\dfrac{11}{15}\]
 \end{voorbeeld}
 
 \begin{exercise}
 Rangschik van klein naar groot:
-$$\dfrac{12}{30} \qquad \dfrac{21}{28} \qquad \dfrac{36}{18} \qquad \dfrac{3}{5}$$
+\[\dfrac{12}{30} \qquad \dfrac{21}{28} \qquad \dfrac{36}{18} \qquad \dfrac{3}{5}\]
 \end{exercise}
 
 \begin{solution}
-$$\dfrac{12}{30} \qquad \dfrac{21}{28} \qquad \dfrac{36}{18} \qquad \dfrac{3}{5}$$
+\[\dfrac{12}{30} \qquad \dfrac{21}{28} \qquad \dfrac{36}{18} \qquad \dfrac{3}{5}\]
 Vereenvoudigen:
-$$\dfrac{2}{5} \qquad \dfrac{3}{4} \qquad \dfrac{2}{1} \qquad \dfrac{3}{5}$$
+\[\dfrac{2}{5} \qquad \dfrac{3}{4} \qquad \dfrac{2}{1} \qquad \dfrac{3}{5}\]
 Gelijknamig maken:
-$$\dfrac{8}{20} \qquad \dfrac{15}{20} \qquad \dfrac{40}{20} \qquad \dfrac{12}{20}$$
+\[\dfrac{8}{20} \qquad \dfrac{15}{20} \qquad \dfrac{40}{20} \qquad \dfrac{12}{20}\]
 Ordenen:
-$$\dfrac{8}{20}  < \dfrac{12}{20} < \dfrac{15}{20} < \dfrac{40}{20}$$
+\[\dfrac{8}{20}  < \dfrac{12}{20} < \dfrac{15}{20} < \dfrac{40}{20}\]
 Dus:
-$$\dfrac{12}{30}  < \dfrac{3}{5} < \dfrac{21}{28} < \dfrac{36}{18}$$
+\[\dfrac{12}{30}  < \dfrac{3}{5} < \dfrac{21}{28} < \dfrac{36}{18}\]
 \end{solution}
 
 \begin{exercise}
 Plaats het ongelijkheidsteken $<$ of $>$
 \begin{multicols}{2}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{1}{7} \quad\arule{1cm}\quad \dfrac{1}{8}$
   \item $\dfrac{35}{41} \quad\arule{1cm}\quad \dfrac{31}{41}$
   \item $\dfrac{5}{12} \quad\arule{1cm}\quad \dfrac{5}{9}$
@@ -586,7 +565,7 @@ Plaats het ongelijkheidsteken $<$ of $>$
 
 \begin{solution}
 \begin{multicols}{2}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{1}{7} > \dfrac{1}{8}$
   \item $\dfrac{35}{41} > \dfrac{31}{41}$
   \item $\dfrac{5}{12} < \dfrac{5}{9}$
@@ -618,20 +597,6 @@ Plaats het ongelijkheidsteken $<$ of $>$
 \end{itemize}
 \end{onthoud}
 
-\newpage
-\section*{Oplossingen A.C.O.}
-
-\immediate\closeout\solutionstream
-\input{\jobname.sol}
+\oplossingen
 
 \end{document}
-
-
-\begin{voorbeeld}
-\end{voorbeeld}
-
-\begin{exercise}
-\end{exercise}
-
-\begin{solution}
-\end{solution}

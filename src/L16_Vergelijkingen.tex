@@ -1,41 +1,30 @@
-\documentclass[12pt]{article}
-
-\include{bis}
-
-\usepackage{tikz}
-\usetikzlibrary{calc,arrows}
-\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Volgende wijzigingen werden aangebracht tov de originele bis-basis
+% Basiscursus Wiskunde
+% Les 16. Vergelijkingen
+%
+% Wijzigingen t.o.v. de originele bis-basis:
 % * gebruik linkerlid en rechterlid ipv eerste lid en tweede lid
 % * extra voorbeelden bij oplossen van een vergelijking uit het hoofd
 % * gebruik van equivalent met (<=>) waar gepast
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% * volgende opmerkingen heb ik nog
+%
+% Openstaande opmerkingen:
 % * er wordt niet gesproken over referentieverzameling
 % * de oplossingenverzameling wordt niet genoteerd
 
-\lhead{}
-\rhead{BIS-Basis -- Les 16}
+\documentclass{bis}
 
 \begin{document}
 
-\ConfigureExSol
-
-\setcounter{section}{15}
-\section{Vergelijkingen}
+\les{16}{Vergelijkingen}
 
 
 \subsection{Begrippen}
 
 Deze les sluit nauw aan bij les 6, gelijkheden en ongelijkheden.
-$$5 + 4 = 9 \mbox{ is een gelijkheid.}$$
+\[5 + 4 = 9 \text{ is een gelijkheid.}\]
 Indien een term uit een gelijkheid onbekend is, noemen we deze gelijkheid een {\bf vergelijking}.
-$$5 + ? = 9$$
+\[5 + ? = 9\]
 Het onbekende getal wordt voorgesteld door een letter, meestal $x$.
-$$5 + x = 9$$
+\[5 + x = 9\]
 In deze vergelijking is $5 + x$ het {\bf linkerlid} en $9$ het {\bf rechterlid}.
 $x$ is de {\bf onbekende}.
 Vervang je $x$ door $4$, dan bekom je een gelijkheid. We noemen $4$ een {\bf oplossing} van deze vergelijking.
@@ -75,7 +64,7 @@ Deze methode wordt stap voor stap uitgewerkt, beginnend vanuit eenvoudige voorbe
 x + 9 &= - 5
 \intertext{Een vergelijking oplossen is de waarde van $x$ bepalen.
 We zorgen ervoor dat $x$ in het linkerlid staat en alle andere termen in het rechterlid.}
-x + 9 - 9 &= - 5 - 9 \qquad\mbox{(links en rechts dezelfde bewerking)}
+x + 9 - 9 &= - 5 - 9 \qquad\text{(links en rechts dezelfde bewerking)}
 \intertext{We trekken van beide leden $9$ af. Zo bekomen we opnieuw een gelijkheid.}
 x &= - 5 - 9 	\qquad(+ 9 - 9 = 0)\\
 x &= - 14
@@ -83,12 +72,12 @@ x &= - 14
 Om te controleren of de bekomen oplossing klopt, vervang je, in de oorspronkelijke vergelijking, $x$ door het bekomen resultaat en controleer je of je een gelijkheid bekomt.
 
 {\em Controle: }\\
-$$
+\[
 \begin{rcases*}
-\mbox{LL } = x + 9 = - 14 + 9 = - 5\;\\
-\mbox{RL } = - 5
-\end{rcases*} \Rightarrow \mbox{LL ${=\joinrel=}$ RL, dus OK}
-$$
+\text{LL } = x + 9 = - 14 + 9 = - 5\;\\
+\text{RL } = - 5
+\end{rcases*} \Rightarrow \text{LL ${=\joinrel=}$ RL, dus OK}
+\]
 
 Om een {\bf term} uit een lid te verwijderen, vermeerder je beide leden met het tegengestelde van die term.
 
@@ -153,8 +142,6 @@ x &= 23
 
 Als een factor van lid verandert, deel je door die factor.
 
-{\em Controle: } \vglproef{$3\cdot -8=-24$}{$-24$}
-
 \end{voorbeeld}
 
 
@@ -186,18 +173,15 @@ Als een factor van lid verandert kunnen we in plaats van te delen door die facto
 \begin{minipage}[t]{0.5\textwidth}
 Delen door $-4$ is gelijk aan vermenigvuldigen met $-\frac{1}{4}$. Veranderen van lid is vermenigvuldigen met het omgekeerde. Het omgekeerde van $-\frac{1}{4}$ is $-4$. M.a.w. delen door $-4$ wordt bij overbrenging vermenigvuldigen met $-4$.
 \end{minipage}
-\end{voorbeeld}
+
 {\em Controle: }\\\vglproef{x:(-4)=-36:(-4)=9}{9}
+\end{voorbeeld}
 
 \subsubsection{Gemengde oefeningen}
 
 Indien er in een oefening verschillende termen met $x$ voorkomen, stelt deze $x$ steeds hetzelfde getal voor.
 
 Breng alle termen waarin een $x$ voorkomt naar het linkerlid, alle termen zonder $x$ naar het rechterlid.
-
-\newcommand{\underwrite}[2]{
-\underset{#2}{\underline{#1}}
-}
 
 \begin{voorbeeld}
 \begin{alignat*}{2}
@@ -225,18 +209,17 @@ Let op bij de controle: vul de gevonden oplossing steeds in de oorspronkelijke o
 
 \begin{exercise}
 Los volgende vergelijkingen op:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $x+3=-10$
   \item $-3x=-12$
   \item $- 2x + 12 = - 20$
   \item $9x + 7 = 3 - 11x$
-  \item $0,9x = 6 + 0,3x$
+  \item $0.9x = 6 + 0.3x$
 \end{enumerate}
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
 \item $\begin{aligned}[t]
      && x+3 &= -10\\
 \LRA &&   x &= -10 -3\\
@@ -262,9 +245,9 @@ Los volgende vergelijkingen op:
 \LRA && x &= -\dfrac{1}{5}\\
 \end{aligned}$
 \item $\begin{aligned}[t]
-     && 0,9x	&= 6 + 0,3x \\
-\LRA && 0,9x - 0,3x	&= 6\\
-\LRA && 0,6x	&= 6\\
+     && 0.9x	&= 6 + 0.3x \\
+\LRA && 0.9x - 0.3x	&= 6\\
+\LRA && 0.6x	&= 6\\
 \LRA && x	&= \dfrac{6}{0.6} \\
 \LRA && x &= 10\\
 \end{aligned}$
@@ -302,7 +285,7 @@ Indien er in een vergelijking haakjes voorkomen, werken we die eerst weg.
 
 \begin{exercise}
 Los volgende vergelijkingen op en maak de proef:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $4 (- x + 5) = 2 (3x - 7)$
   \item $7 - (2x - 5) = - 2 (5x + 3)$
   \item $(7 - x) - 2 (x + 1) = 29 + x$
@@ -311,8 +294,7 @@ Los volgende vergelijkingen op en maak de proef:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
 \item $\begin{aligned}[t]
      && 4(- x + 5)	&= 2(3x - 7)\\
 \LRA &&   - 4x + 20	&= 6x - 14\\
@@ -435,7 +417,7 @@ Een vergelijking waarbij een minteken voor de breukstreep staat, verdient bijzon
 
 \begin{exercise}
 Los volgende vergelijkingen op:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\dfrac{x+2}{6}=\dfrac{x-5}{4}$
   \item $\dfrac{4}{3}x-\dfrac{5}{2}=\dfrac{1}{5}x-\dfrac{1}{2}+\dfrac{1}{3}x$
   \item $\dfrac{x-4}{3}-\dfrac{x+3}{5}=\dfrac{x}{15}$
@@ -444,8 +426,7 @@ Los volgende vergelijkingen op:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
 \item $\begin{aligned}[t]
      && \dfrac{x+2}{6}&=\dfrac{x-5}{4}\\
 \LRA && \dfrac{2x+4}{12}&=\dfrac{3x-15}{12}\\
@@ -518,7 +499,7 @@ Voor $x$ kan je alle getallen invullen. Als je een willekeurig getal vermenigvul
 
 \begin{exercise}
 Los volgende vergelijkingen op en vermeld of ze echt, vals of identiek zijn.
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $3x + 7 = 5x - 3 - 2x$
   \item $\dfrac{1}{7}(5x+9) = x - 1$
   \item $\dfrac{1}{2}(x-30)=2(\dfrac{x}{3}-5)-\dfrac{1}{3}(\dfrac{x}{2}+15)$
@@ -526,8 +507,7 @@ Los volgende vergelijkingen op en vermeld of ze echt, vals of identiek zijn.
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
 \item $\begin{aligned}[t]
      && 3x + 7 &= 5x - 3 - 2x\\
 \LRA && 3x - 5x + 2x	&= - 3 - 7\\
@@ -541,7 +521,7 @@ Valse vergelijking.
 \LRA && 5x - 7x	&= - 7 - 9\\
 \LRA && - 2x	&= - 16\\
 \LRA && x	&= \dfrac{-16}{-2}\\
-\LRA && x	= 8\\
+\LRA && x	&= 8\\
 \end{aligned}$\\
 Echte vergelijking.
 \item $\begin{aligned}[t]
@@ -556,10 +536,6 @@ Identieke vergelijking.
 \end{enumerate}
 \end{solution}
 
-\newpage
-\section*{Oplossingen A.C.O.}
-
-\immediate\closeout\solutionstream
-\input{\jobname.sol}
+\oplossingen
 
 \end{document}

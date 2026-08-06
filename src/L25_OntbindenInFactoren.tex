@@ -1,16 +1,17 @@
-\documentclass[12pt]{article}
+% Basiscursus Wiskunde
+% Les 25. Algemene begrippen bij het ontbinden in factoren
+%
+% Wijzigingen t.o.v. de originele bis-basis:
+% *
+%
+% Openstaande opmerkingen:
+% *
 
-\include{bis}
-
-\lhead{}
-\rhead{BIS-Basis -- Les 25}
+\documentclass{bis}
 
 \begin{document}
 
-\ConfigureExSol
-
-\setcounter{section}{24}
-\section{Algemene begrippen bij het ontbinden in factoren}
+\les{25}{Algemene begrippen bij het ontbinden in factoren}
 
 Op veel examens worden vragen gesteld in verband met het ontbinden in factoren. Waarom? Omdat het ontbinden inzicht vergt in het algebraïsch rekenen met getallen, eentermen en veeltermen.
 Wie kan ontbinden in factoren, bewijst dat hij zijn leerstof beheerst!
@@ -21,16 +22,16 @@ Je hoeft immers niet uit het hoofd te leren, maar wel veel te oefenen om inzicht
 
 \begin{itemize}
   \item We werken het volgende rekenkundige product uit:
-$$3\times 5\times 7 = 105$$
+\[3\times 5\times 7 = 105\]
 
 Omgekeerd kunnen we dan schrijven:
-$$105 = 3\times 5\times 7$$
+\[105 = 3\times 5\times 7\]
 
 We zeggen dan, dat we 105 ontbonden hebben in een product van ondeelbare factoren.
   \item We werken het volgende product van algebraïsche vormen uit:
-	$$(x + 3)(2x-5) = 2x^2 - 5x + 6x - 15 = 2x^2 + x - 15$$
+	\[(x + 3)(2x-5) = 2x^2 - 5x + 6x - 15 = 2x^2 + x - 15\]
 	Omgekeerd kunnen we dan schrijven:
-	$$2x^2 + x - 15 = (x + 3)(2x - 5)$$
+	\[2x^2 + x - 15 = (x + 3)(2x - 5)\]
 	We zeggen dan, dat we de veelterm $2x^2 + x - 15$ ontbonden hebben in een product van twee factoren $x + 3$ en $2x - 5$, die elk van een lagere graad zijn dan de veelterm.
 	
 	\item Definitie:\\
@@ -43,9 +44,9 @@ Het nut van het ontbinden zal pas duidelijk worden op het einde van de cursus, b
 
 \subsubsection{Redenering}
   We werken het volgende product uit:
-$$4xy^2(3x^2 - 2yz) = 12x^3y^2 - 8xy^3z$$
+\[4xy^2(3x^2 - 2yz) = 12x^3y^2 - 8xy^3z\]
 Omgekeerd mogen we nu ook schrijven:
-$$12x^3y^2 - 8xy^3z = 4xy^2(3x^2 - 2yz)$$
+\[12x^3y^2 - 8xy^3z = 4xy^2(3x^2 - 2yz)\]
 Door het {\em buiten haakjes brengen van de gemeenschappelijke factoren} is de veelterm nu geschreven als een product van factoren. De veelterm is nu {\em ontbonden}.
 
 \subsubsection{Werkwijze}
@@ -56,18 +57,18 @@ Door het {\em buiten haakjes brengen van de gemeenschappelijke factoren} is de v
 \subsubsection*{Het vinden van de gemeenschappelijke factor:}
 \begin{description}
   \item[de coëfficiënt] de grootste gemene deler (ggd) van de coëfficiënten. Bijvoorbeeld
-  $$ggd(12,8)=4\;.$$
+  \[\ggd(12,8)=4\;.\]
   \item[het lettergedeelte] de gemeenschappelijke letterfactoren, elk met hun kleinst voorkomende exponent. Bijvoorbeeld in $12x^3y^2 - 8xy^3z$ zijn $x$ en $y$ gemeenschappelijke letterfactoren.
   \begin{itemize}
     \item Kleinst voorkomende exponent van $x$ is $1$ $\rightarrow x$
     \item Kleinst voorkomende exponent van $y$ is $2$ $\rightarrow y^2$
   \end{itemize}
   \item[de gemeenschappelijke factor] = het product van alle gemeenschappelijke factoren, dus
-  $$4xy^2\;.$$
+  \[4xy^2\;.\]
 \end{description}
 
 \begin{voorbeeld}
-$$12x^3y^2 - 8x^2y^3z + 4x^2y^4 = \underbrace{4x^2y^2}_{gf} (\underbrace{3x}_{t_1} - \underbrace{2yz}_{t_2} + \underbrace{y^2}_{t_3})$$
+\[12x^3y^2 - 8x^2y^3z + 4x^2y^4 = \underbrace{4x^2y^2}_{gf} (\underbrace{3x}_{t_1} - \underbrace{2yz}_{t_2} + \underbrace{y^2}_{t_3})\]
 \begin{description}
   \item[$gf$:] $4x^2y^2$ is de gemene factor buiten de haakjes
   \item[$t_1$:] $(12x^3y^2):(4x^2y^2)=3x$ is de eerste term binnen de haakjes
@@ -77,28 +78,28 @@ $$12x^3y^2 - 8x^2y^3z + 4x^2y^4 = \underbrace{4x^2y^2}_{gf} (\underbrace{3x}_{t_
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$24x^7 - 36y^2 = 12 (2x^7 - 3y^2)$$
+\[24x^7 - 36y^2 = 12 (2x^7 - 3y^2)\]
 
 Het is ook de gewoonte een gemeenschappelijke cijferfactor buiten haakjes te brengen, alhoewel de graad van de veeltermfactor hierdoor niet verlaagt. Merk op dat de cijferfactor zelf niet ontbonden wordt in priemfactoren.
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$ -30a^5 + 45b^4 = -15 (2a^5 - 3b^4)$$
+\[ -30a^5 + 45b^4 = -15 (2a^5 - 3b^4)\]
 
 We kunnen ook de gemeenschappelijke factor laten voorafgaan door een minteken (denk dan aan de tekenregel !).
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$14a^3b^3 - 21a^2b^2 + 7ab = 7ab (2a^2b^2 - 3ab + 1)$$
+\[14a^3b^3 - 21a^2b^2 + 7ab = 7ab (2a^2b^2 - 3ab + 1)\]
 
 Let op de aanwezigheid van $+1$ binnen de haakjes! Immers 
-$$(7ab):(7ab) = 1$$
+\[(7ab):(7ab) = 1\]
 (en niet $0$). De factor binnen de haakjes bevat steeds evenveel termen als de gegeven veelterm!
 \end{voorbeeld}
 
 \begin{exercise}
 Breng de gemeenschappelijke factoren buiten haakjes:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $2x^2y - 3xy^2 + x^2y^2$
   \item $4a^2b + 8ac^2 - 12b^2c$
   \item $21x^2y^2 - 14xy^3 - 28xy^4$
@@ -109,8 +110,7 @@ Breng de gemeenschappelijke factoren buiten haakjes:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $2x^2y - 3xy^2 + x^2y^2=xy (2x - 3y + xy)$
   \item $4a^2b + 8ac^2 - 12b^2c=4 (a^2b + 2ac^2 - 3b^2c)$
   \item $21x^2y^2 - 14xy^3 - 28xy^4=7xy^2 (3x - 2y - 4y^2)$
@@ -123,7 +123,7 @@ Breng de gemeenschappelijke factoren buiten haakjes:
 \subsection{De gemeenschappelijke factor is een veelterm}
 
 \begin{voorbeeld}
-$$4x (\underline{a - b}) + 5y (\underline{a - b}) = (\underbrace{a - b}_{gf}) (\underbrace{4x}_{t_1} + \underbrace{5y}_{t_2})$$
+\[4x (\underline{a - b}) + 5y (\underline{a - b}) = (\underbrace{a - b}_{gf}) (\underbrace{4x}_{t_1} + \underbrace{5y}_{t_2})\]
 
 \begin{description}
   \item[$gf$:] De gemene factor is $a-b$
@@ -135,10 +135,10 @@ Let op! De factor, die we hier buiten haakjes brengen, staat zelf tussen haakjes
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$m (a + b) - (a + b) = (a + b) (m - 1)$$
+\[m (a + b) - (a + b) = (a + b) (m - 1)\]
 
 Let op de aanwezigheid van $-1$ binnen het tweede stel haakjes. Immers
-$$\dfrac{a+b}{a+b}=1\;.$$
+\[\dfrac{a+b}{a+b}=1\;.\]
 \end{voorbeeld}
 
 \begin{voorbeeld}
@@ -150,7 +150,7 @@ Er schijnt geen gemeenschappelijke factor te zijn. Als we echter de laatste twee
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$2a (3x - y) - 3b (y - 3x)$$
+\[2a (3x - y) - 3b (y - 3x)\]
 
 In deze veelterm is geen gemeenschappelijke factor aan te wijzen. Als we echter de veeltermen tussen de haakjes vergelijken, dan zien we dat $y - 3x$ het tegengestelde is van $3x - y$. Als we nu het teken vóór het tweede stel haakjes wijzigen en ook de tekens erbinnen, dan komt de gemeenschappelijke factor te voorschijn.
 
@@ -161,13 +161,13 @@ In deze veelterm is geen gemeenschappelijke factor aan te wijzen. Als we echter 
 \end{align*}
 
 Wijzigen van tekens mag, op voorwaarde dat de tekens van 2 factoren gewijzigd worden. Immers, als we in een product 2 factoren van teken veranderen, dan blijft het resultaat ongewijzigd. Bijvoorbeeld:
-$$\underbrace{(-5)\cdot(+3)}_{=-15}=\underbrace{(+5)\cdot(-3)}_{=-15} \qquad\qquad
-  \underbrace{(-4)\cdot(-6)}_{=+24}=\underbrace{(+4)\cdot(+6)}_{=+24}$$
+\[\underbrace{(-5)\cdot(+3)}_{=-15}=\underbrace{(+5)\cdot(-3)}_{=-15} \qquad\qquad
+  \underbrace{(-4)\cdot(-6)}_{=+24}=\underbrace{(+4)\cdot(+6)}_{=+24}\]
 \end{voorbeeld}
 
 \begin{exercise}
 Ontbind:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $a (x - 1) + 2 (x - 1)$
   \item $a^2 (b + 5) + a (b + 5)$
   \item $2a (x + y) - b (y + x)$
@@ -179,13 +179,12 @@ Ontbind:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $a (x - 1) + 2 (x - 1)=(x - 1) (a + 2)$
   \item $\begin{aligned}[t]a^2 (b + 5) + a (b + 5)
   &=(b + 5) (a^2 + a)\\
   &=a (b + 5) (a + 1)\end{aligned}$
-  \item $2a (x + y) - b (y + x)=(x + y) (2a - b) \mbox{ want } x + y = y + x$
+  \item $2a (x + y) - b (y + x)=(x + y) (2a - b) \text{ want } x + y = y + x$
   \item $\begin{aligned}[t]2x (a - x) + 3y (x - a)
   &=2x (a - x) - 3y (a - x)\\
   &=(a - x) (2x - 3y)\end{aligned}$
@@ -241,7 +240,7 @@ Een ontbinding in factoren is slechts af, als we alles volledig ontbonden hebben
 
 \begin{exercise}
 Ontbind:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $(3a + 5b) (x - y) - (x - y) (2a - 7b)$
   \item $4 (3x - 7y) (a + 5b) + 7 (3x - 7y) (2a - 3b)$
   \item $(a - 3b) (2a + 7b) - (a - 3b)^2$
@@ -251,8 +250,7 @@ Ontbind:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\begin{aligned}[t](3a + 5b) (x - y) - (x - y) (2a - 7b)
   &= (x - y) [(3a + 5b) - (2a - 7b)]\\
   &= (x - y) (3a + 5b - 2a + 7b)\\
@@ -282,11 +280,11 @@ Ontbind:
 \subsection{Ontbinden door samennemen van veeltermen}
 
 De volgende twee veeltermen (tweetermen)
-$$10ax + 15x	\qquad\mbox{ en }\qquad	4ay + 6y$$
+\[10ax + 15x	\qquad\text{ en }\qquad	4ay + 6y\]
 kunnen we reeds schrijven als een product van factoren:
-$$10ax + 15x = 5x (2a + 3)	\qquad\mbox{ en }\qquad 4ay + 6y = 2y (2a + 3)$$
+\[10ax + 15x = 5x (2a + 3)	\qquad\text{ en }\qquad 4ay + 6y = 2y (2a + 3)\]
 Als we nu even de twee veeltermen (tweetermen) samenbrengen, dan hebben we de volgende vierterm:
-$$10ax + 15x + 4ay + 6y$$
+\[10ax + 15x + 4ay + 6y\]
 Het is duidelijk dat het nu onmogelijk is een factor te vinden die gemeenschappelijk is bij elk van de vier termen.
 
 Als we nu echter de vierterm, door het invoeren van haakjes, splitsen in twee groepen van elk twee termen, dan is het mogelijk per groepje een gemeenschappelijke factor buiten haakjes te brengen.
@@ -298,13 +296,13 @@ Als we nu echter de vierterm, door het invoeren van haakjes, splitsen in twee gr
 
 Zo zien we dat er nu wel een tweeterm als gemeenschappelijke factor te voorschijn komt.
 Door verdere ontbinding bekomen we dan:
-$$(2a + 3) (5x + 2y)$$
+\[(2a + 3) (5x + 2y)\]
 De gegeven vierterm is ontbonden in factoren door het {\bf samennemen van termen}.
 
 \subsubsection*{Werkwijze}
 
 Om een veelterm te ontbinden door samennemen van termen moeten we:
-\begin{enumerate}
+\begin{enumerate}[label=\arabic*.]
   \item de termen zo samennemen dat, na het buiten haakjes brengen van een gemeenschappelijke factor, per groep opnieuw een gemeenschappelijke factor te voorschijn komt;
   \item dan die gemeenschappelijke factor op zijn beurt buiten haakjes brengen.
 \end{enumerate}
@@ -374,7 +372,7 @@ Zoals je vaststelt, kunnen we hier 2 groepjes van 3 termen of 3 groepjes van 2 t
 \end{voorbeeld}
 
 \begin{voorbeeld}
-$$a^2x + abx + ac + b^2y + aby + bc$$
+\[a^2x + abx + ac + b^2y + aby + bc\]
 
 \begin{minipage}{0.4\textwidth}
 \begin{align*}
@@ -426,7 +424,7 @@ Tracht nu de volgende opgaven te maken om de behandelde methode in te oefenen.
 
 \begin{exercise}
 Ontbind in factoren door samennemen van termen:
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $20x^2 - 24xy + 15xz - 18yz$
   \item $2ab^2 + 3b^3 - 4ac - 6bc$
   \item $2a^2 - 2a + a - 1$
@@ -438,8 +436,7 @@ Ontbind in factoren door samennemen van termen:
 \end{exercise}
 
 \begin{solution}
-\vspace{-2\topsep}
-\begin{enumerate}[(a)]
+\begin{enumerate}
   \item $\begin{aligned}[t]20x^2 - 24xy + 15xz - 18yz
       &= (20x^2 - 24xy) + (15xz - 18yz)\\
 			&= 4x (5x - 6y) + 3z (5x - 6y)\\
@@ -486,16 +483,16 @@ Ontbind in factoren door samennemen van termen:
 
 \begin{exercise}
 Als we een veelterm in factoren ontbinden, dan zijn de factoren:
-\begin{enumerate}[A  ]
+\begin{meerkeuze}
   \item altijd van een lagere graad dan de veelterm;
   \item meestal van een lagere graad dan de veelterm;
   \item soms van een lagere graad dan de veelterm;
   \item nooit van een lagere graad dan de veelterm.
-\end{enumerate}
+\end{meerkeuze}
 \end{exercise}
 
 \begin{solution}
-B -- De factoren zijn altijd van een lagere graad dan de veelterm, behalve in een geval: als alleen een cijferfactor buiten de haakjes gebracht wordt.
+(B) -- De factoren zijn altijd van een lagere graad dan de veelterm, behalve in een geval: als alleen een cijferfactor buiten de haakjes gebracht wordt.
 \end{solution}
 
 \begin{onthoud}
@@ -508,16 +505,6 @@ Gemeenschappelijke factor van de termen van een veelterm:
 Als niet alle termen een gemene factor hebben, probeer dan te ontbinden door samennemen van termen.
 \end{onthoud}
 
-\newpage
-\section*{Oplossingen A.C.O.}
-
-\immediate\closeout\solutionstream
-\input{\jobname.sol}
+\oplossingen
 
 \end{document}
-
-
-
-
-
-
